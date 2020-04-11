@@ -81,7 +81,7 @@
 
             <div class="media media-21x9 mb-md-3">
                 <a class="media-content" title="<?php $this->title()?>" href="<?php $this->permalink()?>"
-                    target="_blank" style='background-image:url("<?php $this->fields->bimg();?>")'></a>
+                    target="_blank" style='background-image:url("<?php $this->fields->bimg ? $this->fields->bimg() : showThumbnail($this, 0);?>")'></a>
             </div>
             <div class="list-desc d-none d-md-block text-sm text-secondary">
                 <div class="h-2x "><?php $this->excerpt(60, '...');?></div>

@@ -294,6 +294,9 @@ jQuery(document).ready(function ($) {
             if ($("#article-menu")) {
                 $("#article-menu").append(content);
             }
+            if ($("#m-article-menu")) {
+                $("#m-article-menu").append(content);
+            }
             console.log($("#article-menu"));
             
             console.log(content);

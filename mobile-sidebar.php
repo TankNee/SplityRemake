@@ -24,7 +24,7 @@
         <div class="card-header widget-header">文章目录<i class="bg-primary"></i>
         </div>
         <div class="card-body">
-            <div class="list-news my-n2" id="article-menu">
+            <div class="list-news my-n2" id="m-article-menu">
             </div>
         </div>
     </div>
