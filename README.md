@@ -1,8 +1,11 @@
 ### Splity-Remake
+
 基于Splity主题创建的typecho主题
 
 当前版本（Date：2020-04-11） 0.0.1
+
 Change Log: 
+
     - 修复黑暗模式的bug
     - 增加文章目录的输出
     - 调整文章缩略图的输出
