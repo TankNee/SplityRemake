@@ -152,8 +152,6 @@ $count = 0;?>
         </div>
         <div class="card-body">
             <div class="list-news my-n2" id="article-menu">
-
-
             </div>
         </div>
     </div>

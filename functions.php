@@ -134,6 +134,14 @@ function themeFields($layout)
     $bimg->input->setAttribute('class', 'w-100');
     $layout->addItem($bimg);
 
+    $pretag = new Typecho_Widget_Helper_Form_Element_Text('pretag', null, null, _t('标题前的标签'), _t('在这里填入标签名'));
+    $pretag->input->setAttribute('class', 'w-100');
+    $layout->addItem($pretag);
+
+    $prebadge = new Typecho_Widget_Helper_Form_Element_Text('prebadge', null, null, _t('文章左侧的徽标'), _t('在这里填入徽标名'));
+    $prebadge->input->setAttribute('class', 'w-100');
+    $layout->addItem($prebadge);
+
     //单图/大图/三图显示
     $abcimg = new Typecho_Widget_Helper_Form_Element_Radio('abcimg',
         array('able' => _t('单图'),

@@ -294,11 +294,27 @@ jQuery(document).ready(function ($) {
             if ($("#article-menu")) {
                 $("#article-menu").append(content);
             }
+            if ($("#m-article-menu")) {
+                $("#m-article-menu").append(content);
+            }
             console.log($("#article-menu"));
             
             console.log(content);
         }
     }
+    renderMathInElement(document.body, {
+        delimiters: [{
+                left: "$$",
+                right: "$$",
+                display: true
+            },
+            {
+                left: "$",
+                right: "$",
+                display: false
+            }
+        ]
+    });
     GenerateContentList();
 }); // End of use strict
 
