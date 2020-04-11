@@ -25,3 +25,4 @@ Change Log:
     > <img src="https://img.tanknee.cn/blogpicbed/2020/04/2020041177f60cc42daeb.png"/>
     > 详情请前往文章编辑页查看！
 - 修复了tag输出的问题
+- 添加颜文字的支持
