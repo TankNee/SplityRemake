@@ -31,7 +31,9 @@
         if(comiis_poster_start_wlat == 0){
             comiis_poster_start_wlat = 1;
             popup.open('<img src="<?php $this->options->themeUrl("poster/img/imageloading.gif"); ?>" class="comiis_loading">');
-			var url = window.location.href.split('#')[0];
+            var url = window.location.href.split('#')[0];
+            var title = '<?php $this->title(); ?>';
+            var excerpt = `<?php $this->excerpt(45, '...');?>`;
 			url = encodeURIComponent(url);
             var html = '<div id="comiis_poster_box" class="comiis_poster_nchxd">\n' +
                 '<div class="comiis_poster_box">\n' +
@@ -57,14 +59,14 @@
                 '</div>\n' +
                 '<div class="comiis_poster_box_img">\n' +
                 '<div class="comiis_poster_img"><div class="img_time"><?php $this->date('d'); ?><span><?php $this->date('Y'); ?>/<?php $this->date('m'); ?></span></div><img src="<?php if ($this->fields->bimg): ?><?php $this->fields->bimg(); ?><?php else: ?><?php $this->fields->img(); ?><?php endif; ?>" class="vm" id="comiis_poster_image"></div>\n' +
-                '<div class="comiis_poster_tita"><?php $this->title(); ?></div>\n' +
-                '<div class="comiis_poster_txta"><?php $this->excerpt(45, '...');?></div><div class="comiis_poster_x guig"></div>\n' +
+                `<div class="comiis_poster_tita">${title}</div>\n<div class="comiis_poster_txta">${title}</div><div class="comiis_poster_x guig"></div>\n` +
                 '<div class="comiis_poster_foot">\n' +
                 '<img src="<?php $this->options->themeUrl("poster/api.php"); ?>?url='+url+'" class="kmewm fqpl vm">\n' +
                 '<img src="<?php $this->options->themeUrl("poster/img/poster_zw.png"); ?>" class="kmzw vm"><span class="kmzwtip">'+txt1+'<br>'+txt2+'</span>\n' +
                 '</div>\n' +
                 '</div>\n' +
                 '</div>';
+            console.log(html);
             if(html.indexOf("comiis_poster") >= 0){
                 comiis_poster_time_baxt = setTimeout(function(){
                     comiis_poster_rrwz();

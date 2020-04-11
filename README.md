@@ -19,3 +19,9 @@ Change Log:
 - 页首添加了动画
 - 修改了文章中a标签的样式
 - 修改了图片的显示
+- mobile端文章目录的支持
+- 修复了图片分享的bug
+- 添加了`pretag`和`prebadge`的字段支持
+    > <img src="https://img.tanknee.cn/blogpicbed/2020/04/2020041177f60cc42daeb.png"/>
+    > 详情请前往文章编辑页查看！
+- 修复了tag输出的问题

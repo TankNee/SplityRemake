@@ -1,3 +1,7 @@
+/**
+*   author:Vv,tanknee
+*
+**/
 /*--------------------------------------------------------------
     reset style
 --------------------------------------------------------------*/
@@ -5139,7 +5143,7 @@ a.next {
 .tag-post:before{
     position: absolute;top: 8px;left: -8px;z-index: 1;
     padding-right: 10px;
-    color: #000;
+    color: #fff;
     font-weight: bold;
     font-family: splity, Arial, sans-serif;
     height: 0px;line-height: 0px;
@@ -5184,4 +5188,21 @@ a.next {
     font-weight:bold;
     font-family:STHeitiSC-Light;
     text-decoration: none;
+}
+.tag-list a{
+    background-color: #2c63ff;
+    position: relative;
+    top: -2px;
+    font-size: .75rem;
+    margin: 0 .25rem 0 0;
+    border-radius: 2px;
+    font-weight: 400;
+    padding: .25em .3em;
+}
+.pretag{
+    background-color: rgb(68,142,246);
+    border-radius: 6px;
+    margin-right: 10px;
+    padding: 2px 5px;
+    color: white;
 }
