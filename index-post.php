@@ -1,4 +1,4 @@
-<div class="list-home list-grid list-grid-padding" id="content">
+<div class="list-home list-grid list-grid-padding animated fadeIn" id="content">
 
     <?php $counter=0; ?>
     <?php while($this->next()): ?>

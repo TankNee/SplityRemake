@@ -8,7 +8,7 @@
         <div class="d-none d-md-block breadcrumbs text-muted mb-3">
             <?php $this->need('link-s.php');?>
         </div>
-        <div class="row no-gutters">
+        <div class="row no-gutters animated fadeIn">
             <div class="col-lg-8">
                 <div class="post card">
                     <div class="card-body">

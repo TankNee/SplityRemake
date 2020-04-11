@@ -5164,3 +5164,24 @@ a.next {
 .nice-dark-mode .comment-body{
     border:none;
 }
+#article-post img{
+    border-radius: 6px;
+    display: block;
+    margin: 20px auto;
+    object-fit: contain;
+    box-shadow:1px 3px 5px #999;
+}
+.nice-dark-mode #article-post img{
+    border-radius: 6px;
+    display: block;
+    margin: 20px auto;
+    object-fit: contain;
+    box-shadow:1px 3px 5px rgb(29,31,32);
+}
+#article-post a{
+    color: #0e88eb;
+    border-bottom: 0px solid #ff3502;
+    font-weight:bold;
+    font-family:STHeitiSC-Light;
+    text-decoration: none;
+}
