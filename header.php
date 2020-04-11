@@ -23,8 +23,10 @@
     <link rel="stylesheet" href="<?php $this->options->themeUrl('css/jimu.css');?>" type="text/css" media="all">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('css/iconfont.css');?>" type="text/css" media="all">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('css/splity.css');?>" type="text/css" media="all">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('css/OwO.css');?>" type="text/css" media="all">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('style.css');?>">
     <script type="text/javascript" src="<?php $this->options->themeUrl('js/jquery.min.js');?>"></script>
+    <script type="text/javascript" src="<?php $this->options->themeUrl('js/OwO.js');?>"></script>
     <link rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.2/jquery.fancybox.min.css">
     <script src="https://cdn.staticfile.org/fancybox/3.5.2/jquery.fancybox.min.js"></script>
     <link href="https://cdn.bootcss.com/animate.css/3.7.2/animate.css" rel="stylesheet">

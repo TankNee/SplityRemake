@@ -58,8 +58,10 @@ echo $commentClass;
         <h3 id="response" class="comment-reply-title"><?php _e('发表评论'); ?></h3>
         <form id="new_comment_form" method="post" action="<?php $this->commentUrl() ?>" _lpchecked="1">
 
-            <div class="new_comment"><textarea name="text" rows="3" class="textarea_box" style="height: auto;"
-                    placeholder="Write Your Idea!"></textarea></div>
+            <div class="new_comment"><textarea name="text" rows="3" class="textarea_box OwO-textarea"
+                    style="height: auto;" placeholder="Write Your Idea!"></textarea>
+                <div class="OwO padder-v-sm" style="text-align:right; padding-right: 10px;"></div>
+            </div>
 
             <div class="comment_triggered" style="display: block;">
                 <div class="input_body">
@@ -96,3 +98,15 @@ echo $commentClass;
     <?php endif; ?>
 
 </div>
+<script>
+var OwO_demo = new OwO({
+    logo: 'OωO表情',
+    container: document.getElementsByClassName('OwO')[0],
+    target: document.getElementsByClassName('OwO-textarea')[0],
+    api: '<?php $this->options->themeUrl('assets/OwO.json');?>',
+    position: 'down',
+    width: '100%',
+    maxHeight: '250px'
+});
+console.log(OwO_demo);
+</script>
