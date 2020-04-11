@@ -30,3 +30,4 @@ Change Log:
 - 修复了tag输出的问题
 - 添加颜文字的支持
 - 添加了对LaTeX公式的支持
+- 实现Handsome按钮格式的显示
