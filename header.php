@@ -30,6 +30,14 @@
     <link rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.2/jquery.fancybox.min.css">
     <script src="https://cdn.staticfile.org/fancybox/3.5.2/jquery.fancybox.min.js"></script>
     <link href="https://cdn.bootcss.com/animate.css/3.7.2/animate.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css"
+        integrity="sha384-9tPv11A+glH/on/wEu99NVwDPwkMQESOocs/ZGXPoIiLE8MU/qkqUcZ3zzL+6DuH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js"
+        integrity="sha384-U8Vrjwb8fuHMt6ewaCy8uqeUXv4oitYACKdB0VziCerzt011iQ/0TqlSlv8MReCm" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/contrib/auto-render.min.js"
+        integrity="sha384-aGfk5kvhIq5x1x5YdvCp4upKZYnA8ckafviDpmWEKp4afOZEqOli7gqSnh8I6enH" crossorigin="anonymous">
+    </script>
     <?php if ($this->is('post')): ?>
     <?php if ($this->options->baiduappdi): ?>
     <link rel="canonical" href="<?php $this->permalink()?>" />
@@ -49,10 +57,8 @@
                 <!-- / brand -->
                 <a href="<?php $this->options->siteUrl();?>" rel="home" class="logo navbar-brand order-2 order-lg-1">
                     <?php if ($this->options->logoUrl): ?>
-                    <img src="<?php $this->options->logoUrl();?>"
-                        alt="<?php $this->options->title()?>"
-                        width="100px" height="40px"
-                        class="d-inline-block logo-light nc-no-lazy" />
+                    <img src="<?php $this->options->logoUrl();?>" alt="<?php $this->options->title()?>" width="100px"
+                        height="40px" class="d-inline-block logo-light nc-no-lazy" />
                     <?php else: ?>
                     <?php $this->options->title()?>
                     <?php endif;?>
