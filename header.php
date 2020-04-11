@@ -27,6 +27,7 @@
     <script type="text/javascript" src="<?php $this->options->themeUrl('js/jquery.min.js');?>"></script>
     <link rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.2/jquery.fancybox.min.css">
     <script src="https://cdn.staticfile.org/fancybox/3.5.2/jquery.fancybox.min.js"></script>
+    <link href="https://cdn.bootcss.com/animate.css/3.7.2/animate.css" rel="stylesheet">
     <?php if ($this->is('post')): ?>
     <?php if ($this->options->baiduappdi): ?>
     <link rel="canonical" href="<?php $this->permalink()?>" />
@@ -39,10 +40,10 @@
 </head>
 
 <body class="home blog <?php echo ($_COOKIE['night'] == '1' ? 'night' : ''); ?>">
-    <header class="header">
+    <header class="header ">
         <!--导航e-->
-        <nav class="navbar navbar-expand-lg shadow">
-            <div class="container">
+        <nav class="navbar navbar-expand-lg shadow ">
+            <div class="container animated fadeInDown">
                 <!-- / brand -->
                 <a href="<?php $this->options->siteUrl();?>" rel="home" class="logo navbar-brand order-2 order-lg-1">
                     <?php if ($this->options->logoUrl): ?>
