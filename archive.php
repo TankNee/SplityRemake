@@ -14,7 +14,7 @@
 
 <!--正常列表样式s-->
 
-<?php $this->need('index - post.php'); ?>
+<?php $this->need('index-post.php'); ?>
 
 <!--正常列表样式e-->
 
