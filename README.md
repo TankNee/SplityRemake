@@ -31,3 +31,6 @@ Change Log:
 - 添加颜文字的支持
 - 添加了对LaTeX公式的支持
 - 实现Handsome按钮格式的显示
+- 修复OwO颜文字的显示
+- 修改评论区的字体
+- 增加对handsome短代码的支持
