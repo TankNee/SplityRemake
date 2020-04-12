@@ -83,7 +83,6 @@ function toggleSidebar() {
 }
 jQuery(document).ready(function ($) {
     toggleSidebar();
-
     $(window).scroll(function () {
         var $window = $(window),
             $window_width = $window.width();

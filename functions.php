@@ -488,3 +488,21 @@ function isMobile()
     } 
     return false;
 }
+function parseCommentContent($content)
+{
+	if (strpos($content, '[secret]') !== false) {//提高效率，避免每篇文章都要解析
+		$pattern = get_shortcode_regex(array('secret'));
+		$utils = new Utils();
+		$content = preg_replace_callback("/$pattern/",'secretContentParseCallback', $content);
+	}
+	echo $content;
+}
+function secretContentParseCallback($matches)
+{
+    // 不解析类似 [[player]] 双重括号的代码
+    if ($matches[1] == '[' && $matches[6] == ']') {
+        return substr($matches[0], 1, -1);
+    }
+
+    return '<span class="hideContent" style="font-weight:600;"> 🔒该文本仅博主可见🔒 </span>';
+}
