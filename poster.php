@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="<?php $this->options->themeUrl('poster/css/poster.css'); ?>" type="text/css" media="all">
 
 <script src="<?php $this->options->themeUrl('poster/js/html2canvas.min.js'); ?>"></script>
-<script src="<?php $this->options->themeUrl('/poster/js/common.js'); ?>"></script>
+<script src="<?php $this->options->themeUrl('poster/js/common.js'); ?>"></script>
 <script src="https://cdn.bootcss.com/jquery/2.1.0/jquery.min.js" type="text/javascript"></script>
 
 <script>
@@ -19,13 +19,13 @@
     });
     function comiis_poster_rrwz(){
         setTimeout(function(){
-            html2canvas(document.querySelector(".comiis_poster_box_img"), {scale:2,useCORS:true}).then(canvas => {
+            html2canvas(document.querySelector(".comiis_poster_box_img"), {scale:3,useCORS:true}).then(canvas => {
                 var img = canvas.toDataURL("image/jpeg", .9);
                 document.getElementById('comiis_poster_images').src = img;
                 $('.comiis_poster_load').hide();
                 $('.comiis_poster_imgshow').show();
             });
-        }, 100);
+        }, 60);
     }
     function show_comiis_poster_ykzn(){
         if(comiis_poster_start_wlat == 0){
@@ -33,7 +33,7 @@
             popup.open('<img src="<?php $this->options->themeUrl("poster/img/imageloading.gif"); ?>" class="comiis_loading">');
             var url = window.location.href.split('#')[0];
             var title = '<?php $this->title(); ?>';
-            var excerpt = `<?php $this->excerpt(45, '...');?>`;
+            var excerpt = `<?php $this->excerpt(200, '...');?>`;
 			url = encodeURIComponent(url);
             var html = '<div id="comiis_poster_box" class="comiis_poster_nchxd">\n' +
                 '<div class="comiis_poster_box">\n' +
@@ -58,19 +58,18 @@
                 '<div class="comiis_poster_okclose"><a href="javascript:;" class="comiis_poster_closekey"><img src="<?php $this->options->themeUrl("poster/img/poster_okclose.png"); ?>" class="vm"></a></div>\n' +
                 '</div>\n' +
                 '<div class="comiis_poster_box_img">\n' +
-                '<div class="comiis_poster_img"><div class="img_time"><?php $this->date('d'); ?><span><?php $this->date('Y'); ?>/<?php $this->date('m'); ?></span></div><img src="<?php if ($this->fields->bimg): ?><?php $this->fields->bimg(); ?><?php else: ?><?php $this->fields->img(); ?><?php endif; ?>" class="vm" id="comiis_poster_image"></div>\n' +
-                `<div class="comiis_poster_tita">${title}</div>\n<div class="comiis_poster_txta">${title}</div><div class="comiis_poster_x guig"></div>\n` +
+                '<div class="comiis_poster_img"><div class="img_time"><?php $this->date('d'); ?><span><?php $this->date('Y'); ?>/<?php $this->date('m'); ?></span></div><img src="<?php if ($this->fields->bimg): ?><?php $this->fields->bimg(); ?><?php else: ?><?php showThumbnail($this,0); ?><?php endif; ?>" class="vm" id="comiis_poster_image"></div>\n' +
+                `<div class="comiis_poster_tita">${title}</div>\n<div class="comiis_poster_txta">${excerpt}</div><div class="comiis_poster_x guig"></div>\n` +
                 '<div class="comiis_poster_foot">\n' +
                 '<img src="<?php $this->options->themeUrl("poster/api.php"); ?>?url='+url+'" class="kmewm fqpl vm">\n' +
                 '<img src="<?php $this->options->themeUrl("poster/img/poster_zw.png"); ?>" class="kmzw vm"><span class="kmzwtip">'+txt1+'<br>'+txt2+'</span>\n' +
                 '</div>\n' +
                 '</div>\n' +
                 '</div>';
-            console.log(html);
             if(html.indexOf("comiis_poster") >= 0){
                 comiis_poster_time_baxt = setTimeout(function(){
                     comiis_poster_rrwz();
-                }, 5000);
+                }, 60);
                 $('body').append(html);
                 $('#comiis_poster_image').load(function(){
                     clearTimeout(comiis_poster_time_baxt);

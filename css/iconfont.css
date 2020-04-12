@@ -530,4 +530,9 @@
 .icon-file-list--line:before {
   content: "\e8c2";
 }
-
+.custom-font{
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+}
