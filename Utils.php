@@ -830,4 +830,38 @@ EOF;
     {
         return '/([\w-]+)\s*=\s*"([^"]*)"(?:\s|$)|([\w-]+)\s*=\s*\'([^\']*)\'(?:\s|$)|([\w-]+)\s*=\s*([^\s\'"]+)(?:\s|$)|"([^"]*)"(?:\s|$)|\'([^\']*)\'(?:\s|$)|(\S+)(?:\s|$)/';
     }
+    /**
+     * 短代码解析正则替换回调函数
+     * @param $matches
+     * @return bool|string
+     */
+    public static function scodeParseCallback($matches)
+    {
+        // 不解析类似 [[player]] 双重括号的代码
+        if ($matches[1] == '[' && $matches[6] == ']') {
+            return substr($matches[0], 1, -1);
+        }
+        //[scode type="share"]这是灰色的短代码框，常用来引用资料什么的[/scode]
+        $attr = htmlspecialchars_decode($matches[3]);//还原转义前的参数列表
+        $attrs = self::shortcode_parse_atts($attr);//获取短代码的参数
+        $type = "info";
+        switch ($attrs['type']) {
+            case 'yellow':
+                $type = "warning";
+                break;
+            case 'red':
+                $type = "error";
+                break;
+            case 'lblue':
+                $type = "info";
+                break;
+            case 'green':
+                $type = "success";
+                break;
+            case 'share':
+                $type = "share";
+                break;
+        }
+        return '<div class="tip inlineBlock ' . $type . '">' . $matches[5] . '</div>';
+    }
 }
