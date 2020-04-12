@@ -13,7 +13,7 @@
                             <h1 class="h3 mb-3"><?php $this->title(); ?></h1>
                         </div>
                         <div class="post-content">
-                            <?php $this->content(); ?>
+                            <?php PreprocessTextContent($this); ?>
                         </div>
                     </div>
                 </div>

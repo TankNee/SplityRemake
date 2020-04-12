@@ -5206,3 +5206,38 @@ a.next {
     padding: 2px 5px;
     color: white;
 }
+.tip.inlineBlock {
+    display: inline-block;
+    width: 100%;
+}
+
+.tip.warning {
+    border-left-color: #ff7800;
+    background: #fcf2e9;
+    
+}
+.tip.share {
+    border-left-color: #ddd;
+    background: #efefef;
+}
+.tip.error {
+    border-left-color: #ed0000;
+    background: #fcf1f1;
+}
+.tip.success {
+    border-left-color: #86cc00;
+    background: #f0f8e5;
+}
+.tip {
+    background: #eef6fd;
+    padding: 8px 20px;
+    border-left: 3px solid #38a3fd;
+    border-radius: 0 5px 5px 0;
+    margin-bottom: 10px;
+    color: black;
+}
+#comments{
+    font-family: splity, Arial, sans-serif;
+    font-size: 1rem !important;
+    font-weight: 700!important;
+}
