@@ -29,12 +29,15 @@ echo $commentClass;
 ?>">
     <div id="<?php $comments->theId(); ?>" class="comment-body">
         <div class="comment-author">
-
             <?php $email=$comments->mail; $imgUrl = getGravatar($email);echo '<img src="'.$imgUrl.'" width="45px" height="45px" style="border-radius: 50%;" >'; ?>
             <cite class="fn"><?php CommentAuthor($comments); ?></cite><span class="says"><?php _e(''); ?></span>
         </div>
         <div class="comment-meta">
             <a href="<?php $comments->permalink(); ?>"><?php $comments->date('Y-m-d H:i'); ?></a>
+            <span class="comment-ua">
+                <?php getOs($comments->agent); ?>
+                <?php getBrowser($comments->agent); ?>
+            </span>
         </div>
         <?php parseCommentContent($comments->content); ?>
         <div class="reply">
@@ -104,7 +107,8 @@ var OwO_demo = new OwO({
     logo: 'OωO表情',
     container: document.getElementsByClassName('OwO')[0],
     target: document.getElementsByClassName('OwO-textarea')[0],
-    api: '<?php $this->options->themeUrl('assets/OwO.json');?>',
+    api: '<?php $this->options->themeUrl('
+    assets / OwO.json ');?>',
     position: 'down',
     width: '100%',
     maxHeight: '250px'
