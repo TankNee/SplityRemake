@@ -866,7 +866,7 @@ Size
 }
 
 .text-muted {
-    color: #9ca0ad !important;
+    color: #949da3 !important;
 }
 
 .text-light {
@@ -4202,7 +4202,7 @@ SIDEBAR STYLE
 }
 
 .nice-dark-mode .text-muted {
-    color: #585c5f !important;
+    color: #949da3 !important;
 }
 
 .nice-dark-mode .text-light {
@@ -5240,4 +5240,51 @@ a.next {
     font-family: splity, Arial, sans-serif;
     font-size: 1rem !important;
     font-weight: 700!important;
+}
+.btn-black {
+    color: #fff!important;
+    background-color: #1c2b36;
+    border-color: #1c2b36;
+}
+.btn-dark {
+	color: #fff!important;
+	background-color: #3a3f51;
+	border-color: #3a3f51
+}
+.btn-danger {
+	color: #fff!important;
+	background-color: #f05050;
+	border-color: #f05050
+}
+.btn-warning {
+	color: #fff!important;
+	background-color: #fad733;
+	border-color: #fad733
+}
+.btn-info {
+	color: #fff!important;
+	background-color: #23b7e5;
+	border-color: #23b7e5
+}
+.btn-success {
+	color: #fff!important;
+	background-color: #27c24c;
+	border-color: #27c24c
+}
+.btn-primary {
+	color: #fff!important;
+	background-color: #7266ba;
+	border-color: #7266ba
+}
+.btn-default {
+	color: #58666e!important;
+	background-color: #fcfdfd;
+	background-color: #fff;
+	border-color: #dee5e7;
+	border-bottom-color: #d8e1e3;
+	-webkit-box-shadow: 0 1px 1px rgba(90,90,90,.1);
+	box-shadow: 0 1px 1px rgba(90,90,90,.1)
+}
+.shelter{
+    display: none;
 }

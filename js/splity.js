@@ -57,11 +57,13 @@ function toggleDarkMode() {
 
         $(".logo-light").removeClass("d-none");
         $(".logo-light").addClass("d-inline-block");
+        $(".excerpt-text").addClass("d-inline-block");
     } else {
         $(".logo-dark").removeClass("d-none");
         $(".logo-dark").addClass("d-inline-block");
         $(".logo-light").removeClass("d-inline-block");
         $(".logo-light").addClass("d-none");
+        $(".excerpt-text").removeClass("d-inline-block");
     }
 }
 // mobile Sidebar

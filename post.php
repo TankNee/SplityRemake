@@ -29,7 +29,7 @@
                             <div class="border-theme bg-primary"></div>
                         </div>
                         <div class="post-content" id="article-post">
-                            <?php PreprocessTextContent($this)?>
+                            <?php PreprocessTextContent($this);?>
                         </div>
                     </div>
                     <div class="card-footer pt-0 border-0">

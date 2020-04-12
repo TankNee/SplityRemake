@@ -16,7 +16,7 @@
                     class="list-title text-lg h-2x mb-2 mb-md-3"><?php $this->title()?></a>
                 <div class="mb-2 mb-md-3">
                     <div class="d-flex flex-fill align-items-center text-muted text-xs">
-                        <div class="d-inline-block">
+                        <div class="d-inline-block" style="color:#949da3;">
                             <?php $this->excerpt(60, '...');?>
                         </div>
                         <div class="flex-fill"></div>
@@ -51,7 +51,7 @@
 
             </div>
             <div class="list-desc d-none d-md-block text-sm text-secondary">
-                <div class="h-2x"><?php $this->excerpt(100, '...');?></div>
+                <div class="h-2x" style="color:#949da3;"><?php $this->excerpt(100, '...');?></div>
             </div>
         </div>
     </div>
@@ -64,7 +64,7 @@
     <div class="list-item list-item-column block card-featured post">
         <div class="list-content p-0">
             <div class="list-body ">
-                <a class="list-title text-lg h-2x mb-2 mb-md-3" title="<?php $this->title()?>"
+                <a class="list-title text-lg h-2x mb-2 mb-md-3 custom-font" title="<?php $this->title()?>"
                     href="<?php $this->permalink()?>" target="_blank"><?php $this->title()?></a>
                 <div class="mb-2 mb-md-3">
                     <div class="d-flex flex-fill align-items-center text-muted text-xs">
@@ -81,10 +81,11 @@
 
             <div class="media media-21x9 mb-md-3">
                 <a class="media-content" title="<?php $this->title()?>" href="<?php $this->permalink()?>"
-                    target="_blank" style='background-image:url("<?php $this->fields->bimg ? $this->fields->bimg() : showThumbnail($this, 0);?>")'></a>
+                    target="_blank"
+                    style='background-image:url("<?php $this->fields->bimg ? $this->fields->bimg() : showThumbnail($this, 0);?>")'></a>
             </div>
             <div class="list-desc d-none d-md-block text-sm text-secondary">
-                <div class="h-2x "><?php $this->excerpt(60, '...');?></div>
+                <div class="h-2x" style="color:#949da3;"><?php $this->excerpt(60, '...');?></div>
             </div>
         </div>
     </div>
@@ -115,7 +116,7 @@
                         <?php endif;?>
                         <?php $this->title()?></a>
                     <div class="list-desc d-none d-md-block text-sm text-secondary my-3">
-                        <div class="h-2x "><?php $this->excerpt(60, '...');?></div>
+                        <div class="h-2x" style="color:#949da3;"><?php $this->excerpt(60, '...');?></div>
                     </div>
                 </div>
                 <div class="list-footer">
@@ -128,8 +129,8 @@ echo '<img src="' . $imgUrl . '" class="avatar" height="25" width="25">';?>
                         </div>
                         <div class="flex-fill"></div>
                         <div>
-                            <?php $this->author->screenName();?>
-                            <time class="mx-1"><?php $this->date('m-d');?></time>
+                            <a class="iconfont" style="color:#949da3;" href="<?php $this->permalink()?>#comments"><i class="iconfont icon-chat--line"><?php $this->commentsNum('%d 条评论');?></i></a>
+                            <a class="iconfont" style="color:#949da3;" href="<?php $this->permalink()?>#"><i class="iconfont icon-dvd-line"><?php $this->date('yy-m-d');?></i></a>
                         </div>
                     </div>
                 </div>
