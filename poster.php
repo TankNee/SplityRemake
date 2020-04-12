@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="<?php $this->options->themeUrl('poster/css/poster.css'); ?>" type="text/css" media="all">
 
 <script src="<?php $this->options->themeUrl('poster/js/html2canvas.min.js'); ?>"></script>
-<script src="<?php $this->options->themeUrl('poster/js/common.js'); ?>"></script>
+<script src="<?php $this->options->themeUrl('/poster/js/common.js'); ?>"></script>
 <script src="https://cdn.bootcss.com/jquery/2.1.0/jquery.min.js" type="text/javascript"></script>
 
 <script>
