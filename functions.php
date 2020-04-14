@@ -171,15 +171,13 @@ function Postviews($archive)
     if ($archive->is('single')) {
         $cookie = Typecho_Cookie::get('contents_views');
         $cookie = $cookie ? explode(',', $cookie) : array();
-        if (!in_array($cid, $cookie)) {
-            $db->query($db->update('table.contents')
-                    ->rows(array('views' => (int) $exist + 1))
-                    ->where('cid = ?', $cid));
-            $exist = (int) $exist + 1;
-            array_push($cookie, $cid);
-            $cookie = implode(',', $cookie);
-            Typecho_Cookie::set('contents_views', $cookie);
-        }
+        $db->query($db->update('table.contents')
+                ->rows(array('views' => (int) $exist + 1))
+                ->where('cid = ?', $cid));
+        $exist = (int) $exist + 1;
+        array_push($cookie, $cid);
+        $cookie = implode(',', $cookie);
+        Typecho_Cookie::set('contents_views', $cookie);
     }
     echo $exist == 0 ? '0' : $exist . ' ';
 }
@@ -279,25 +277,7 @@ function PreprocessTextContent($article)
 }
 function parseContentPublic($content)
 {
-    // $options = mget();
-    // //解析文章中的表情短代码
-    // $content = Utils::handle_preg_replace_callback('/::([^:\s]*?):([^:\s]*?)::/sm',
-    // array('Content','emojiParseCallback'),
-    // $content);
-    // //解析markdown扩展语法
-    // if ($options->markdownExtend != "" && in_array('scode', $options->markdownExtend)) {
-    // $content = Utils::handle_preg_replace_callback("/(@|√|!|x|i)&gt;\s(((?!<\ /p>).)*)(<br \ />|<\ /p>)/is",
-    //         array('Content', 'sCodeMarkdownParseCallback'), $content);
-    //         }
-    //         //解析拼音注解写法
-    //         if ($options->markdownExtend != "" && in_array('pinyin', $options->markdownExtend)) {
-    //         $content = Utils::handle_preg_replace('/\{\{\s*([^\:]+?)\s*\:\s*([^}]+?)\s*\}\}/is',
-    //         "<ruby>$1<rp> (</rp>
-    //             <rt>$2</rt>
-    //             <rp>) </rp>
-    //         </ruby>", $content);
-    //         }
-    require_once 'Utils.php';
+    include ('common/utils.php');
     $utils = new Utils();
     //解析短代码功能
     if (strpos($content, '[scode') !== false) {
