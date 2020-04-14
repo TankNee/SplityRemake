@@ -58,10 +58,11 @@
                 '<div class="comiis_poster_okclose"><a href="javascript:;" class="comiis_poster_closekey"><img src="<?php $this->options->themeUrl("poster/img/poster_okclose.png"); ?>" class="vm"></a></div>\n' +
                 '</div>\n' +
                 '<div class="comiis_poster_box_img">\n' +
-                '<div class="comiis_poster_img"><div class="img_time"><?php $this->date('d'); ?><span><?php $this->date('Y'); ?>/<?php $this->date('m'); ?></span></div><img src="<?php if ($this->fields->bimg): ?><?php $this->fields->bimg(); ?><?php else: ?><?php showThumbnail($this,0); ?><?php endif; ?>" class="vm" id="comiis_poster_image"></div>\n' +
+                '<div class="comiis_poster_img"><div class="img_time"><?php $this->date('d'); ?><span><?php $this->date('Y'); ?>/<?php $this->date('m'); ?></span></div><img src="<?php if ($this->fields->bimg): ?><?php $this->fields->bimg(); ?><?php else: ?><?php echo showThumbnail($this,0); ?><?php endif; ?>" class="vm" id="comiis_poster_image"></div>\n' +
                 `<div class="comiis_poster_tita">${title}</div>\n<div class="comiis_poster_txta">${excerpt}</div><div class="comiis_poster_x guig"></div>\n` +
                 '<div class="comiis_poster_foot">\n' +
-                '<img src="<?php $this->options->themeUrl("poster/api.php"); ?>?url='+url+'" class="kmewm fqpl vm">\n' +
+                // '<img src="http://qr.liantu.com/api.php?text='+url+'" class="kmewm fqpl vm">\n' +
+                '<img src="<?php $this->options->rootUrl(); ?>/usr/themes/splity/poster/api.php?url='+url+'" class="kmewm fqpl vm">\n' +
                 '<img src="<?php $this->options->themeUrl("poster/img/poster_zw.png"); ?>" class="kmzw vm"><span class="kmzwtip">'+txt1+'<br>'+txt2+'</span>\n' +
                 '</div>\n' +
                 '</div>\n' +

@@ -13,7 +13,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) {
 
 $this->need('header.php');
 ?>
-<!--幻灯片s-->
+<?php $this->need('index-hd.php'); ?>
 <!--幻灯片e-->
 <main class="py-3  pt-md-4 pb-md-5">
     <div class="container">

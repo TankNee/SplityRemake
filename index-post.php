@@ -33,19 +33,19 @@
                 <div class="col-4">
                     <div class="media media-3x2">
                         <a class="media-content" title="<?php $this->title()?>" href="<?php $this->permalink()?>"
-                            target="_blank" style='background-image:url(" <?php showThumbnail($this, 0);?>")'></a>
+                            target="_blank" style='background-image:url(" <?php echo showThumbnail($this, 0);?>")'></a>
                     </div>
                 </div>
                 <div class="col-4">
                     <div class="media media-3x2">
                         <a class="media-content" title="<?php $this->title()?>" href="<?php $this->permalink()?>"
-                            target="_blank" style='background-image:url(" <?php showThumbnail($this, 1);?>")'></a>
+                            target="_blank" style='background-image:url(" <?php echo showThumbnail($this, 1);?>")'></a>
                     </div>
                 </div>
                 <div class="col-4">
                     <div class="media media-3x2">
                         <a class="media-content" title="<?php $this->title()?>" href="<?php $this->permalink()?>"
-                            target="_blank" style='background-image:url(" <?php showThumbnail($this, 2);?>")'></a>
+                            target="_blank" style='background-image:url(" <?php echo showThumbnail($this, 2);?>")'></a>
                     </div>
                 </div>
 
@@ -82,7 +82,7 @@
             <div class="media media-21x9 mb-md-3">
                 <a class="media-content" title="<?php $this->title()?>" href="<?php $this->permalink()?>"
                     target="_blank"
-                    style='background-image:url("<?php $this->fields->bimg ? $this->fields->bimg() : showThumbnail($this, 0);?>")'></a>
+                    style='background-image:url("<?php $this->fields->bimg ? $this->fields->bimg() : echoThumbnail($this, 0);?>")'></a>
             </div>
             <div class="list-desc d-none d-md-block text-sm text-secondary">
                 <div class="h-2x" style="color:#949da3;"><?php $this->excerpt(60, '...');?></div>
@@ -105,7 +105,7 @@
                     style='background-image:url("<?php $this->fields->img();?>")'></a>
                 <?php else: ?>
                 <a class="media-content" href="<?php $this->permalink()?>" title="<?php $this->title()?>"
-                    style='background-image:url("<?php showThumbnail($this, 0);?>")'></a>
+                    style='background-image:url("<?php echo showThumbnail($this, 0);?>")'></a>
                 <?php endif;?>
             </div>
             <div class="list-content">
