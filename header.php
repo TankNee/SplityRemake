@@ -74,16 +74,40 @@
                 <!-- brand -->
                 <div class="collapse navbar-collapse order-md-2">
                     <ul class="navbar-nav main-menu ml-4 mr-auto">
-                        <?php $this->widget('Widget_Contents_Page_List')->to($pages);?>
+                        <!-- <?php $this->widget('Widget_Contents_Page_List')->to($pages);?>
                         <?php while ($pages->next()): ?>
                         <li>
                             <a<?php if ($this->is('page', $pages->slug)): ?> class="current" <?php endif;?>
                                 href="<?php $pages->permalink();?>" title="<?php $pages->title();?>">
                                 <?php $pages->title();?></a>
                         </li>
+                        <?php endwhile;?> -->
+                        
+                        <?php $this->widget('Widget_Metas_Category_List')->to($categorys);?>
+                        <?php while ($categorys->next()): ?>
+                        <?php if ($categorys->levels === 0): ?>
+                        <?php $children = $categorys->getAllChildren($categorys->mid);?>
+                        <?php if (empty($children)) {?>
+                        <li>
+                            <a href="<?php $categorys->permalink();?>"
+                                title="<?php $categorys->name();?>"><?php $categorys->name();?></a>
+                        </li>
+                        <?php } else {?>
+                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                            <a><?php $categorys->name();?></a>
+                            <ul class="sub-menu">
+                                <?php foreach ($children as $mid) {?>
+                                <?php $child = $categorys->getCategory($mid);?>
+                                <li>
+                                    <a href="<?php echo $child['permalink'] ?>"
+                                        title="<?php echo $child['name']; ?>"><?php echo $child['name']; ?></a>
+                                </li>
+                                <?php }?>
+                            </ul>
+                        </li>
+                        <?php }?>
+                        <?php endif;?>
                         <?php endwhile;?>
-
-
                     </ul>
 
                     <ul class="navbar-nav align-items-center order-1 order-lg-2">

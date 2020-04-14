@@ -1,4 +1,4 @@
-<div class="list-banner list-rounded banner-style-2 banner-has-nav pt-3 pt-md-5">
+<div class="list-banner list-rounded banner-style-2 banner-has-nav pt-3 pt-md-5 animated fadeIn">
     <div class="container">
         <!--全屝s-->
         <div class="owl-carousel owl-theme">
@@ -9,12 +9,6 @@ $n = count($hang);
 $html = "";
 for ($i = 0; $i < $n; $i++) {
     $this->widget('Widget_Archive@lunbo' . $i, 'pageSize=1&type=post', 'cid=' . $hang[$i])->to($ji);
-    // $img="";
-    // if ($ji->fields->img) {
-    //     $img = $ji->fields->img;
-    // } else { 
-    //     $img = showThumbnail($ji, 0);
-    // }
     if ($i == 0) {$no = " sx_no";} else { $no = "";}
     if ($ji->fields->img) {
         $thumbnail = $ji->fields->img;

@@ -273,32 +273,23 @@ function PreprocessTextContent($article)
     $img_replacement = '<a href="$1" data-fancybox="gallery" /><img src="$1" alt="' . $article->title . '"
         title="点击放大图片"></a>';
     $content = preg_replace('/\<img.*?src\=\"(.*?)\"[^>]*>/i', $img_replacement, $article->content);
-    echo parseContentPublic($content);
-}
-function parseContentPublic($content)
-{
-    include ('common/utils.php');
+    include 'common/utils.php';
     $utils = new Utils();
-    //解析短代码功能
+    // parse scode
     if (strpos($content, '[scode') !== false) {
-        //提高效率，避免每篇文章都要解析
         $pattern = get_shortcode_regex(array('scode'));
-        $content = $utils->handle_preg_replace_callback("/$pattern/", array('self', 'scodeParseCallback'),
+        $content = preg_replace_callback("/$pattern/", array('utils', 'parseScodeCallback'),
             $content);
     }
-    //解析显示按钮短代码
+    // parse button
     if (strpos($content, '[button') !== false) {
-        //提高效率，避免每篇文章都要解析
         $pattern = get_shortcode_regex(array('button'));
-        $content = $utils->handle_preg_replace_callback("/$pattern/", array('self', 'parseButtonCallback'),
+        $content = preg_replace_callback("/$pattern/", array('utils', 'parseButtonCallback'),
             $content);
     }
-    return $content;
+    echo $content;
 }
 /**
- * 获取匹配短代码的正则表达式
- * @param null $tagnames
- * @return string
  * @link https://github.com/WordPress/WordPress/blob/master/wp-includes/shortcodes.php#L254
  */
 function get_shortcode_regex($tagnames = null)
@@ -343,112 +334,6 @@ function get_shortcode_regex($tagnames = null)
     // 6: Optional second closing brocket for escaping shortcodes: [[tag]]
     // phpcs:enable
 }
-function handleHtml($content, $callback)
-{
-    $replaceStartIndex = array();
-    $replaceEndIndex = array();
-    $currentReplaceId = 0;
-    $replaceIndex = 0;
-    $searchIndex = 0;
-    $searchCloseTag = false;
-    $contentLength = strlen($content);
-    while (true) {
-        if ($searchCloseTag) {
-            $tagName = substr($content, $searchIndex, 4);
-            if ($tagName == "<cod") {
-                $searchIndex = strpos($content, '</code>', $searchIndex);
-                if (!$searchIndex) {
-                    break;
-                }
-                $searchIndex += 7;
-            } elseif ($tagName == "<pre") {
-                $searchIndex = strpos($content, '</pre>', $searchIndex);
-                if (!$searchIndex) {
-                    break;
-                }
-                $searchIndex += 6;
-            } elseif ($tagName == "<kbd") {
-                $searchIndex = strpos($content, '</kbd>', $searchIndex);
-                if (!$searchIndex) {
-                    break;
-                }
-                $searchIndex += 6;
-            } elseif ($tagName == "<scr") {
-                $searchIndex = strpos($content, '</script>', $searchIndex);
-                if (!$searchIndex) {
-                    break;
-                }
-                $searchIndex += 9;
-            } elseif ($tagName == "<sty") {
-                $searchIndex = strpos($content, '</style>', $searchIndex);
-                if (!$searchIndex) {
-                    break;
-                }
-                $searchIndex += 8;
-            } else {
-                break;
-            }
-            if (!$searchIndex) {
-                break;
-            }
-            $replaceIndex = $searchIndex;
-            $searchCloseTag = false;
-            continue;
-        } else {
-            $searchCodeIndex = strpos($content, '<code', $searchIndex);
-            $searchPreIndex = strpos($content, '<pre', $searchIndex);
-            $searchKbdIndex = strpos($content, '<kbd', $searchIndex);
-            $searchScriptIndex = strpos($content, '<script', $searchIndex);
-            $searchStyleIndex = strpos($content, '<style', $searchIndex);
-            if (!$searchCodeIndex) {
-                $searchCodeIndex = $contentLength;
-            }
-            if (!$searchPreIndex) {
-                $searchPreIndex = $contentLength;
-            }
-            if (!$searchKbdIndex) {
-                $searchKbdIndex = $contentLength;
-            }
-            if (!$searchScriptIndex) {
-                $searchScriptIndex = $contentLength;
-            }
-            if (!$searchStyleIndex) {
-                $searchStyleIndex = $contentLength;
-            }
-            $searchIndex = min($searchCodeIndex, $searchPreIndex, $searchKbdIndex, $searchScriptIndex, $searchStyleIndex);
-            $searchCloseTag = true;
-        }
-        $replaceStartIndex[$currentReplaceId] = $replaceIndex;
-        $replaceEndIndex[$currentReplaceId] = $searchIndex;
-        $currentReplaceId++;
-        $replaceIndex = $searchIndex;
-    }
-    $output = "";
-    $output .= substr($content, 0, $replaceStartIndex[0]);
-    for ($i = 0; $i < count($replaceStartIndex); $i++) {
-        $part = substr($content, $replaceStartIndex[$i], $replaceEndIndex[$i] - $replaceStartIndex[$i]);
-        if (is_array($callback)) {
-            $className = $callback[0];
-            $method = $callback[1];
-            $renderedPart = call_user_func($className . '::' . $method, $part);
-        } else {
-            $renderedPart = $callback($part);
-        }
-        $output .= $renderedPart;
-        if ($i < count($replaceStartIndex) - 1) {
-            $output .= substr($content, $replaceEndIndex[$i], $replaceStartIndex[$i + 1] - $replaceEndIndex[$i]);
-        }
-    }
-    $output .= substr($content, $replaceEndIndex[count($replaceStartIndex) - 1]);
-    return $output;
-}
-function handle_preg_replace_callback($pattern, $callback, $subject)
-{
-    return handleHtml($subject, function ($content) use ($callback, $pattern) {
-        return preg_replace_callback($pattern, $callback, $content);
-    }
-    );
-}
 // 移动端设备判断函数
 function isMobile()
 {
@@ -481,20 +366,17 @@ function isMobile()
 }
 function parseCommentContent($content)
 {
-    if (strpos($content, '[secret]') !== false) { //提高效率，避免每篇文章都要解析
+    if (strpos($content, '[secret]') !== false) {
         $pattern = get_shortcode_regex(array('secret'));
-        $utils = new Utils();
         $content = preg_replace_callback("/$pattern/", 'secretContentParseCallback', $content);
     }
     echo $content;
 }
 function secretContentParseCallback($matches)
 {
-    // 不解析类似 [[player]] 双重括号的代码
     if ($matches[1] == '[' && $matches[6] == ']') {
         return substr($matches[0], 1, -1);
     }
-
     return '<span class="hideContent" style="font-weight:600;"> 🔒该文本仅博主可见🔒 </span>';
 }
 // 获取浏览器信息
