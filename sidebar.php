@@ -81,7 +81,7 @@ $count = 0;?>
                                     class="overlay"></span></a>
                             <?php else: ?>
                             <a class="media-content" href="<?php $latestArticles->permalink();?>" target="_blank"
-                                style="background-image: url(<?php showThumbnail($latestArticles, 0);?>);"><span
+                                style="background-image: url(<?php echo showThumbnail($latestArticles, 0);?>);"><span
                                     class="overlay"></span></a>
                             <?php endif;?>
 
