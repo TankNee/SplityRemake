@@ -9,7 +9,7 @@
 
 .iconfont {
   font-family: "iconfont" !important;
-  font-size: 16px;
+  font-size: 0.75rem;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -530,4 +530,9 @@
 .icon-file-list--line:before {
   content: "\e8c2";
 }
-
+.custom-font{
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+}

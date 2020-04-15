@@ -57,11 +57,13 @@ function toggleDarkMode() {
 
         $(".logo-light").removeClass("d-none");
         $(".logo-light").addClass("d-inline-block");
+        $(".excerpt-text").addClass("d-inline-block");
     } else {
         $(".logo-dark").removeClass("d-none");
         $(".logo-dark").addClass("d-inline-block");
         $(".logo-light").removeClass("d-inline-block");
         $(".logo-light").addClass("d-none");
+        $(".excerpt-text").removeClass("d-inline-block");
     }
 }
 // mobile Sidebar
@@ -81,7 +83,6 @@ function toggleSidebar() {
 }
 jQuery(document).ready(function ($) {
     toggleSidebar();
-
     $(window).scroll(function () {
         var $window = $(window),
             $window_width = $window.width();
@@ -294,11 +295,27 @@ jQuery(document).ready(function ($) {
             if ($("#article-menu")) {
                 $("#article-menu").append(content);
             }
+            if ($("#m-article-menu")) {
+                $("#m-article-menu").append(content);
+            }
             console.log($("#article-menu"));
             
             console.log(content);
         }
     }
+    renderMathInElement(document.body, {
+        delimiters: [{
+                left: "$$",
+                right: "$$",
+                display: true
+            },
+            {
+                left: "$",
+                right: "$",
+                display: false
+            }
+        ]
+    });
     GenerateContentList();
 }); // End of use strict
 

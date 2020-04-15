@@ -29,14 +29,17 @@ echo $commentClass;
 ?>">
     <div id="<?php $comments->theId(); ?>" class="comment-body">
         <div class="comment-author">
-
             <?php $email=$comments->mail; $imgUrl = getGravatar($email);echo '<img src="'.$imgUrl.'" width="45px" height="45px" style="border-radius: 50%;" >'; ?>
             <cite class="fn"><?php CommentAuthor($comments); ?></cite><span class="says"><?php _e(''); ?></span>
         </div>
         <div class="comment-meta">
             <a href="<?php $comments->permalink(); ?>"><?php $comments->date('Y-m-d H:i'); ?></a>
+            <span class="comment-ua">
+                <?php getOs($comments->agent); ?>
+                <?php getBrowser($comments->agent); ?>
+            </span>
         </div>
-        <?php PreprocessComment($comments); ?>
+        <?php parseCommentContent($comments->content); ?>
         <div class="reply">
             <span class="comment-reply-link"><?php $comments->reply(); ?></span>
         </div>
@@ -58,8 +61,11 @@ echo $commentClass;
         <h3 id="response" class="comment-reply-title"><?php _e('发表评论'); ?></h3>
         <form id="new_comment_form" method="post" action="<?php $this->commentUrl() ?>" _lpchecked="1">
 
-            <div class="new_comment"><textarea name="text" rows="3" class="textarea_box" style="height: auto;"
-                    placeholder="Write Your Idea!"></textarea></div>
+            <div class="new_comment">
+                <textarea name="text" rows="3" class="textarea_box OwO-textarea" style="height: auto;"
+                    placeholder="Write Your Idea!"></textarea>
+                <div class="OwO padder-v-sm" style="text-align:right; padding-right: 10px;"></div>
+            </div>
 
             <div class="comment_triggered" style="display: block;">
                 <div class="input_body">
@@ -96,3 +102,14 @@ echo $commentClass;
     <?php endif; ?>
 
 </div>
+<script>
+var OwO_demo = new OwO({
+    logo: 'OωO表情',
+    container: document.getElementsByClassName('OwO')[0],
+    target: document.getElementsByClassName('OwO-textarea')[0],
+    api: '<?php $this->options->themeUrl('assets/OwO.json');?>',
+    position: 'down',
+    width: '100%',
+    maxHeight: '250px'
+});
+</script>
