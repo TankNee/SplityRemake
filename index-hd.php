@@ -1,4 +1,4 @@
-<div class="list-banner list-rounded banner-style-2 banner-has-nav pt-3 pt-md-5 animated fadeIn" style="z-index:-1;position: relative;">
+<div class="list-banner list-rounded banner-style-2 banner-has-nav pt-3 pt-md-5 animated fadeIn" style="z-index:1;position: relative;">
     <div class="container">
         <!--全屝s-->
         <div class="owl-carousel owl-theme">

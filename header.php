@@ -50,7 +50,7 @@
 </head>
 
 <body class="home blog <?php echo ($_COOKIE['night'] == '1' ? 'night' : ''); ?>">
-    <header class="header " style="z-index:0">
+    <header class="header " style="z-index:2">
         <!--导航e-->
         <nav class="navbar navbar-expand-lg shadow ">
             <div class="container animated fadeInDown">
