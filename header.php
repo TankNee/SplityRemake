@@ -50,7 +50,7 @@
 </head>
 
 <body class="home blog <?php echo ($_COOKIE['night'] == '1' ? 'night' : ''); ?>">
-    <header class="header ">
+    <header class="header " style="z-index:2">
         <!--导航e-->
         <nav class="navbar navbar-expand-lg shadow ">
             <div class="container animated fadeInDown">
@@ -125,10 +125,10 @@ echo '<img src="' . $imgUrl . '" width="32px" height="32px" class="avatar avatar
                                         <a href="<?php $this->options->adminUrl();?>" rel="nofollow"><i
                                                 class="text-md mr-2 iconfont icon-settings-line1"></i><?php _e('后台管理');?></a>
                                     </li>
-                                    <!-- <li class="p-2">
+                                    <li class="p-2">
                                         <a href="<?php $this->options->logoutUrl();?>"><i
                                                 class="text-md mr-2 iconfont icon-shut-down-line"></i><?php _e('退出登录');?></a>
-                                    </li> -->
+                                    </li>
                                 </ul>
                             </div>
                         </li>

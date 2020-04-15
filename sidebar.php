@@ -28,11 +28,14 @@ echo '<img src="' . $imgUrl . '" class="avatar" height="80" width="80">';?>
             </div>
         </div>
         <div class="widget-author-meta text-center p-4">
-            <div class="h6 mb-3"><?php strtoupper($this->author->screenName());?>
-                <small class="d-block">
+            <div class="h6 mb-3 iconfont" style="font-weight:bold;"><?php strtoupper($this->author->screenName());?>
+                <small class="d-block iconfont" style="margin-top:1rem;">
                     <?php if ($this->options->blogmeabout): ?>
                     <span class="badge badge-outline-primary mt-2"><?php $this->options->blogmeabout();?></span>
                     <?php else: ?>
+                    <!-- 添加一言api -->
+                    <span id="jinrishici-sentence">晚来天欲雨，能饮一杯无</span>
+                    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
                     <?php endif;?>
                 </small>
             </div>
@@ -81,7 +84,7 @@ $count = 0;?>
                                     class="overlay"></span></a>
                             <?php else: ?>
                             <a class="media-content" href="<?php $latestArticles->permalink();?>" target="_blank"
-                                style="background-image: url(<?php echo showThumbnail($latestArticles, 0);?>);"><span
+                                style="background-image: url(<?php echo showThumbnail($latestArticles, 0); ?>);"><span
                                     class="overlay"></span></a>
                             <?php endif;?>
 
