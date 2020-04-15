@@ -1,10 +1,10 @@
 <?php
 /**
+ * 这是一款支持夜间模式的主题，对夜间模式做了很多的优化
  *
- *
- * @package Splity-Remake
+ * @package SplityRemake
  * @author TankNee & 小灯泡设计
- * @version 0.0.1
+ * @version 0.0.2
  * @link https://tanknee.cn
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) {
@@ -13,6 +13,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) {
 
 $this->need('header.php');
 ?>
+<!--幻灯片s-->
 <?php $this->need('index-hd.php'); ?>
 <!--幻灯片e-->
 <main class="py-3  pt-md-4 pb-md-5">

@@ -33,7 +33,7 @@
             popup.open('<img src="<?php $this->options->themeUrl("poster/img/imageloading.gif"); ?>" class="comiis_loading">');
             var url = window.location.href.split('#')[0];
             var title = '<?php $this->title(); ?>';
-            var excerpt = `<?php $this->excerpt(200, '...');?>`;
+            var excerpt = `<?php $this->excerpt(20, '...');?>`;
 			url = encodeURIComponent(url);
             var html = '<div id="comiis_poster_box" class="comiis_poster_nchxd">\n' +
                 '<div class="comiis_poster_box">\n' +
