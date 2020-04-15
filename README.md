@@ -4,7 +4,10 @@
 
 当前版本（Date：2020-04-15） 0.0.2
 
-主题演示地址：[水止舟停](https://neeto.cn)
+主题介绍文章: [Splity-Remake](https://tanknee.cn/2020/04/15/splity-remake)
+
+主题演示地址-1：[归舟棹远](https://tanknee.cn)
+主题演示地址-2：[水止舟停](https://neeto.cn)
 
 主题国内下载地址：[Gitea](https://git.tanknee.cn/tanknee/Splity-Remake)
 
