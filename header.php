@@ -50,9 +50,9 @@
 </head>
 
 <body class="home blog <?php echo ($_COOKIE['night'] == '1' ? 'night' : ''); ?>">
-    <header class="header " style="z-index:2">
+    <header class="header ">
         <!--导航e-->
-        <nav class="navbar navbar-expand-lg shadow ">
+        <nav class="navbar navbar-expand-lg shadow" style="z-index:2">
             <div class="container animated fadeInDown">
                 <!-- / brand -->
                 <a href="<?php $this->options->siteUrl();?>" rel="home" class="logo navbar-brand order-2 order-lg-1">

@@ -27,7 +27,7 @@ echo '<img src="' . $imgUrl . '" class="avatar" height="80" width="80">';?>
                 </div>
             </div>
         </div>
-        <div class="widget-author-meta text-center p-4">
+        <div class="widget-author-meta text-center p-4" style="font-family:'screenname';">
             <div class="h6 mb-3 iconfont" style="font-weight:bold;"><?php strtoupper($this->author->screenName());?>
                 <small class="d-block iconfont" style="margin-top:1rem;">
                     <?php if ($this->options->blogmeabout): ?>

@@ -16,36 +16,39 @@
                     class="list-title text-lg h-2x mb-2 mb-md-3"><?php $this->title()?></a>
                 <div class="mb-2 mb-md-3">
                     <div class="d-flex flex-fill align-items-center text-muted text-xs">
-                        <div class="d-inline-block" style="color:#949da3;">
-                            <?php $this->excerpt(60, '...');?>
+                        <?php $email = $this->author->mail;
+$imgUrl = getGravatar($email);
+echo '<img src="' . $imgUrl . '" class="avatar" height="25" width="25">';?>
+                        <div style="margin-left:0.6rem;">
+                            <?php strtoupper($this->author->screenName());?>
                         </div>
                         <div class="flex-fill"></div>
                         <div>
-                            <time class="mx-1"><?php $this->date('F j, Y');?></time>
+                            <a class="iconfont" style="color:#949da3;" href="<?php $this->permalink()?>#comments"><i
+                                    class="iconfont icon-chat--line"><?php $this->commentsNum('%d 条评论');?></i></a>
+                            <a class="iconfont" style="color:#949da3;" href="<?php $this->permalink()?>#"><i
+                                    class="iconfont icon-dvd-line"><?php $this->date('yy-m-d');?></i></a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row-xs mb-md-3">
-
-
-
                 <div class="col-4">
                     <div class="media media-3x2">
                         <a class="media-content" title="<?php $this->title()?>" href="<?php $this->permalink()?>"
-                            target="_blank" style='background-image:url(" <?php echo showThumbnail($this, 0);?>")'></a>
+                            target="_blank" style='background-image:url(" <?php echo showThumbnail($this, 0); ?>")'></a>
                     </div>
                 </div>
                 <div class="col-4">
                     <div class="media media-3x2">
                         <a class="media-content" title="<?php $this->title()?>" href="<?php $this->permalink()?>"
-                            target="_blank" style='background-image:url(" <?php echo showThumbnail($this, 1);?>")'></a>
+                            target="_blank" style='background-image:url(" <?php echo showThumbnail($this, 1); ?>")'></a>
                     </div>
                 </div>
                 <div class="col-4">
                     <div class="media media-3x2">
                         <a class="media-content" title="<?php $this->title()?>" href="<?php $this->permalink()?>"
-                            target="_blank" style='background-image:url(" <?php echo showThumbnail($this, 2);?>")'></a>
+                            target="_blank" style='background-image:url(" <?php echo showThumbnail($this, 2); ?>")'></a>
                     </div>
                 </div>
 
@@ -69,11 +72,19 @@
                 <div class="mb-2 mb-md-3">
                     <div class="d-flex flex-fill align-items-center text-muted text-xs">
                         <div class="d-inline-block">
-
+                            <?php $email = $this->author->mail;
+$imgUrl = getGravatar($email);
+echo '<img src="' . $imgUrl . '" class="avatar" height="25" width="25">';?>
+                            
+                                <?php strtoupper($this->author->screenName());?>
+                            
                         </div>
                         <div class="flex-fill"></div>
                         <div>
-                            <time class="mx-1"><?php $this->date('F j, Y');?></time>
+                            <a class="iconfont" style="color:#949da3;" href="<?php $this->permalink()?>#comments"><i
+                                    class="iconfont icon-chat--line"><?php $this->commentsNum('%d 条评论');?></i></a>
+                            <a class="iconfont" style="color:#949da3;" href="<?php $this->permalink()?>#"><i
+                                    class="iconfont icon-dvd-line"><?php $this->date('yy-m-d');?></i></a>
                         </div>
                     </div>
                 </div>
@@ -95,7 +106,7 @@
 
     <!--正常列表样式s-->
     <?php if ($this->fields->prebadge): ?>
-    <div class="list-item block card-plain post tag-post" tag="<?php $this->fields->prebadge(); ?>">
+    <div class="list-item block card-plain post tag-post" tag="<?php $this->fields->prebadge();?>">
         <?php else: ?>
         <div class="list-item block card-plain post" tag="">
             <?php endif;?>
@@ -105,7 +116,7 @@
                     style='background-image:url("<?php $this->fields->img();?>")'></a>
                 <?php else: ?>
                 <a class="media-content" href="<?php $this->permalink()?>" title="<?php $this->title()?>"
-                    style='background-image:url("<?php echo showThumbnail($this, 0);?>")'></a>
+                    style='background-image:url("<?php echo showThumbnail($this, 0); ?>")'></a>
                 <?php endif;?>
             </div>
             <div class="list-content">
@@ -129,8 +140,10 @@ echo '<img src="' . $imgUrl . '" class="avatar" height="25" width="25">';?>
                         </div>
                         <div class="flex-fill"></div>
                         <div>
-                            <a class="iconfont" style="color:#949da3;" href="<?php $this->permalink()?>#comments"><i class="iconfont icon-chat--line"><?php $this->commentsNum('%d 条评论');?></i></a>
-                            <a class="iconfont" style="color:#949da3;" href="<?php $this->permalink()?>#"><i class="iconfont icon-dvd-line"><?php $this->date('yy-m-d');?></i></a>
+                            <a class="iconfont" style="color:#949da3;" href="<?php $this->permalink()?>#comments"><i
+                                    class="iconfont icon-chat--line"><?php $this->commentsNum('%d 条评论');?></i></a>
+                            <a class="iconfont" style="color:#949da3;" href="<?php $this->permalink()?>#"><i
+                                    class="iconfont icon-dvd-line"><?php $this->date('yy-m-d');?></i></a>
                         </div>
                     </div>
                 </div>
