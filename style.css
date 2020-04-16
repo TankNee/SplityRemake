@@ -4066,7 +4066,9 @@ SIDEBAR STYLE
 	transition: all 0.5s ease-in-out;
 	cursor: pointer;
 }
-
+.mobile-overlay::-webkit-scrollbar {
+    display: none;
+}
 .mobile-overlay.active {
 	display: block;
 	opacity: 1;
