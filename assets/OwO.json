@@ -116,250 +116,84 @@
       }
     ]
   },
-  "阿鲁": {
-    "name": "aru",
-    "type": "image",
+  "emoji": {
+    "type": "emoticon",
+    "name": "emoji",
     "container": [
       {
-        "icon": "despise",
-        "text": "鄙视"
-      },
-      {
-        "icon": "knife",
-        "text": "插刀"
-      },
-      {
-        "icon": "pouting",
-        "text": "亲嘴"
-      },
-      {
-        "icon": "shutup",
-        "text": "闭嘴"
-      },
-      {
-        "icon": "unhappy",
-        "text": "不开心"
-      },
-      {
-        "icon": "discovertruth",
-        "text": "发现真相"
-      },
-      {
-        "icon": "shit",
-        "text": "便便"
-      },
-      {
-        "icon": "distressed",
-        "text": "烦恼"
-      },
-      {
-        "icon": "shy",
-        "text": "捂脸"
-      },
-      {
-        "icon": "speechless",
-        "text": "无语"
-      },
-      {
-        "icon": "confuse",
-        "text": "迷惑"
-      },
-      {
-        "icon": "frown",
-        "text": "皱眉"
-      },
-      {
-        "icon": "proud",
-        "text": "得意"
-      },
-      {
-        "icon": "cheer",
-        "text": "欢呼"
-      },
-      {
-        "icon": "meditation",
-        "text": "沉思"
-      },
-      {
-        "icon": "diving",
-        "text": "潜水"
-      },
-      {
-        "icon": "cryingface",
-        "text": "掩面哭泣"
-      },
-      {
-        "icon": "lurking",
-        "text": "潜伏"
-      },
-      {
-        "icon": "thumb",
-        "text": "大拇指"
-      },
-      {
-        "icon": "smile",
-        "text": "微笑"
-      },
-      {
-        "icon": "clap",
-        "text": "拍掌"
-      },
-      {
-        "icon": "envious",
-        "text": "眼馋"
-      },
-      {
-        "icon": "surrender",
-        "text": "投降"
-      },
-      {
-        "icon": "bigeye",
-        "text": "大眼睛"
-      },
-      {
-        "icon": "nose",
-        "text": "抠鼻"
-      },
-      {
-        "icon": "sweat",
-        "text": "流汗"
-      },
-      {
-        "icon": "flower",
-        "text": "小花花"
-      },
-      {
-        "icon": "crying",
-        "text": "流泪"
-      },
-      {
-        "icon": "spit",
-        "text": "吐"
-      },
-      {
-        "icon": "surprised",
-        "text": "吃惊"
-      },
-      {
-        "icon": "blood",
-        "text": "一滩血"
-      },
-      {
-        "icon": "blood2",
-        "text": "吐血"
-      },
-      {
-        "icon": "shy2",
-        "text": "脸红"
-      },
-      {
-        "icon": "angry",
-        "text": "生气"
-      },
-      {
-        "icon": "nomatter",
-        "text": "无所谓"
-      },
-      {
-        "icon": "dead",
-        "text": "死翘翘"
-      },
-      {
-        "icon": "insidious",
-        "text": "阴险"
-      },
-      {
-        "icon": "tongue",
-        "text": "吐舌"
-      }
-
-    ]
-  },
-  "推特":{
-    "type": "image",
-    "name": "twemoji",
-    "container":[
-      {
-        "icon": "smile",
-        "text": "微笑"
-      },
-      {
-        "icon": "tongue",
-        "text": "吐舌"
-      },
-      {
-        "icon": "tilted",
-        "text": "歪头"
-      },
-      {
-        "icon": "tiaomei",
-        "text": "挑眉"
-      },
-      {
-        "icon": "shy",
-        "text": "害羞"
-      },
-      {
-        "icon": "sweat",
-        "text": "流汗"
-      },
-      {
-        "icon": "proud",
-        "text": "得意"
-      },{
-        "icon": "uncomfort",
-        "text": "难受"
-      },{
-        "icon": "smilecry",
+        "icon": "😂",
         "text": "笑哭"
       },
       {
-        "icon": "love",
-        "text": "喜欢"
-      },{
-        "icon": "notalk",
-        "text": "不说话"
-      },{
-        "icon": "happy",
-        "text": "开心"
-      },{
-        "icon": "frightened",
-        "text": "惊恐"
-      },{
-        "icon": "dtongue",
+        "icon": "🙂",
+        "text": "微笑"
+      },
+      {
+        "icon": "😛",
         "text": "吐舌"
-      },{
-        "icon": "cry",
+      },
+      {
+        "icon": "😳",
+        "text": "害羞"
+      },
+      {
+        "icon": "😓",
+        "text": "流汗"
+      },
+      {
+        "icon": "😫",
+        "text": "难受"
+      },
+      {
+        "icon": "❤",
+        "text": "喜欢"
+      },
+      {
+        "icon": "🙊",
+        "text": "不说话"
+      },
+      {
+        "icon": "😊",
+        "text": "开心"
+      },
+      {
+        "icon": "😱",
+        "text": "惊恐"
+      },
+      {
+        "icon": "😭",
         "text": "哭泣"
-      },{
-        "icon": "cool",
+      },
+      {
+        "icon": "🆒",
         "text": "炫酷"
-      },{
-        "icon": "bigsmile",
-        "text": "红脸笑"
-      },{
-        "icon": "ok",
+      },
+      {
+        "icon": "👌",
         "text": "可以"
-      },{
-        "icon": "kiss",
+      },
+      {
+        "icon": "😚",
         "text": "亲亲"
-      },{
-        "icon": "angry",
+      },
+      {
+        "icon": "🤯",
         "text": "生气"
-      },{
-        "icon": "family",
+      },
+      {
+        "icon": "👨‍👩‍👧‍👦",
         "text": "家庭"
-      },{
-        "icon": "congratulate",
+      },
+      {
+        "icon": "🍾",
         "text": "祝贺"
-      },{
-        "icon": "gift",
+      },
+      {
+        "icon": "🎁",
         "text": "礼物"
-      },{
-        "icon": "prayer",
-        "text": "祈祷"
-      },{
-        "icon": "star",
+      },
+      {
+        "icon": "⭐",
         "text": "星星"
       }
     ]

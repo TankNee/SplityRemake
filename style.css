@@ -4066,7 +4066,9 @@ SIDEBAR STYLE
 	transition: all 0.5s ease-in-out;
 	cursor: pointer;
 }
-
+.mobile-overlay::-webkit-scrollbar {
+    display: none;
+}
 .mobile-overlay.active {
 	display: block;
 	opacity: 1;
@@ -5132,6 +5134,15 @@ a.next {
 }
 .nice-dark-mode .comment-body {
 	border: none;
+}
+.nice-dark-mode .OwO-logo {
+	background: rgb(29, 31, 32);
+	color: white;
+	border: none;
+}
+.nice-dark-mode .OwO-body {
+	color: rgb(29, 31, 32);
+	text-align: left;
 }
 #article-post img {
 	border-radius: 6px;
