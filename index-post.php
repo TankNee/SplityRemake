@@ -104,7 +104,7 @@ echo '<img src="' . $imgUrl . '" class="avatar" height="25" width="25">';?>
     <!--大图列表样式e-->
     <?php else: ?>
 
-    <!--正常列表样式s-->
+    <!--普通列表样式s-->
     <?php if ($this->fields->prebadge): ?>
     <div class="list-item block card-plain post tag-post" tag="<?php $this->fields->prebadge();?>">
         <?php else: ?>
@@ -150,7 +150,7 @@ echo '<img src="' . $imgUrl . '" class="avatar" height="25" width="25">';?>
             </div>
         </div>
 
-        <!--正常列表样式e-->
+        <!--普通列表样式e-->
 
         <?php endif;?>
 
