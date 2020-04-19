@@ -27,7 +27,7 @@ echo '<img src="' . $imgUrl . '" class="avatar" height="25" width="25">';?>
                             <a class="iconfont" style="color:#949da3;" href="<?php $this->permalink()?>#comments"><i
                                     class="iconfont icon-chat--line"><?php $this->commentsNum('%d 条评论');?></i></a>
                             <a class="iconfont" style="color:#949da3;" href="<?php $this->permalink()?>#"><i
-                                    class="iconfont icon-dvd-line"><?php $this->date('yy-m-d');?></i></a>
+                                    class="iconfont icon-dvd-line"><?php $this->date('Y-m-d');?></i></a>
                         </div>
                     </div>
                 </div>
@@ -84,7 +84,7 @@ echo '<img src="' . $imgUrl . '" class="avatar" height="25" width="25">';?>
                             <a class="iconfont" style="color:#949da3;" href="<?php $this->permalink()?>#comments"><i
                                     class="iconfont icon-chat--line"><?php $this->commentsNum('%d 条评论');?></i></a>
                             <a class="iconfont" style="color:#949da3;" href="<?php $this->permalink()?>#"><i
-                                    class="iconfont icon-dvd-line"><?php $this->date('yy-m-d');?></i></a>
+                                    class="iconfont icon-dvd-line"><?php $this->date('Y-m-d');?></i></a>
                         </div>
                     </div>
                 </div>
@@ -143,7 +143,7 @@ echo '<img src="' . $imgUrl . '" class="avatar" height="25" width="25">';?>
                             <a class="iconfont" style="color:#949da3;" href="<?php $this->permalink()?>#comments"><i
                                     class="iconfont icon-chat--line"><?php $this->commentsNum('%d 条评论');?></i></a>
                             <a class="iconfont" style="color:#949da3;" href="<?php $this->permalink()?>#"><i
-                                    class="iconfont icon-dvd-line"><?php $this->date('yy-m-d');?></i></a>
+                                    class="iconfont icon-dvd-line"><?php $this->date('Y-m-d');?></i></a>
                         </div>
                     </div>
                 </div>
