@@ -10,7 +10,7 @@
 
 
 
-<img src="https://img.tanknee.cn/blogpicbed/2020/04/20200420bc3bd736315c6.png" />
+![iPhone Mode](https://img.tanknee.cn/blogpicbed/2020/04/20200420bc3bd736315c6.png)
 
 
 
@@ -18,7 +18,7 @@
 
 
 
-<img src="https://img.tanknee.cn/blogpicbed/2020/04/202004201754a645f91af.png" />
+![Mac Mode](https://img.tanknee.cn/blogpicbed/2020/04/202004201754a645f91af.png)
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-<img src="https://img.tanknee.cn/blogpicbed/2020/04/202004209d02085c835e1.png" />
+![iPad Mode](https://img.tanknee.cn/blogpicbed/2020/04/202004209d02085c835e1.png)
 
 
 
@@ -82,7 +82,7 @@
 ```sql
 alter table typecho_comments convert to character set utf8mb4 collate utf8mb4_unicode_ci;
 
-alter tale typecho_contents convert to character set utf8mb4 collate utf8mb4_unicode_ci;
+alter table typecho_contents convert to character set utf8mb4 collate utf8mb4_unicode_ci;
 
 alter table typecho_fields convert to character set utf8mb4 collate utf8mb4_unicode_ci;
 
