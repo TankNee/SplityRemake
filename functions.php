@@ -10,6 +10,10 @@ function themeConfig($form)
     $form->addInput($imghdp);
     $favicon = new Typecho_Widget_Helper_Form_Element_Text('favicon', null, null, _t('favicon地址'), _t('一般为http://www.yourblog.com/image.png,支持 https:// 或 //,留空则不设置favicon'));
     $form->addInput($favicon);
+    $archive_img_category_1 = new Typecho_Widget_Helper_Form_Element_Text('archive_img_category_1', null, null, _t('在归档页面显示图片的分类名称 分类一'), _t('默认支持的分类名称为album，还可以添加一个分类'));
+    $form->addInput($archive_img_category_1);
+    $archive_img_category_2 = new Typecho_Widget_Helper_Form_Element_Text('archive_img_category_2', null, null, _t('在归档页面显示图片的分类名称 分类二'), _t('默认支持的分类名称为album，还可以添加一个分类'));
+    $form->addInput($archive_img_category_2);
     $blogmeabout = new Typecho_Widget_Helper_Form_Element_Text('blogmeabout', null, null, _t('博主个人简介'), _t('在这里填入你的个人简介，例如：欢迎来到我的typecho博客。'));
     $form->addInput($blogmeabout);
     $baiduappdi = new Typecho_Widget_Helper_Form_Element_Text('baiduappdi', null, null, _t('配置熊掌号 APPID'), _t('在这里填入你的个人配置熊掌号 APPID，不填写则为不开启，可以和自动推送有现成的插件：BaiduSubmit 配合推送'));

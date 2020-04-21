@@ -47,3 +47,7 @@ Change Log:
 - 修复时间显示的问题
 - 添加instant-page脚本依赖
 - 去除广告图片
+- 实现归档页面
+
+> <img src="https://img.tanknee.cn/blogpicbed/2020/04/202004217bcc85c4cc1f9.png"/>
+
