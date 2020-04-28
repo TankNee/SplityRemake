@@ -144,6 +144,9 @@ function themeFields($layout)
 function getHotPosts($limit = 10)
 {
     $db = Typecho_Db::get();
+    if (!array_key_exists('views', $db->fetchRow($db->select()->from('table.contents')))) {
+        $db->query('ALTER TABLE `' . $db->getPrefix() . 'contents` ADD `views` INT(10) DEFAULT 0;');
+    }
     $result = $db->fetchAll($db->select()->from('table.contents')
             ->where('status = ?', 'publish')
             ->where('type = ?', 'post')
