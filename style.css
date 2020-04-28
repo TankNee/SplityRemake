@@ -5439,7 +5439,7 @@ a.next {
 	border-radius: 6px;
 	padding: 14px;
     position: relative;
-    z-index: 9999;
+    z-index: 40;
 }
 .ke {
 	height: 100%;
