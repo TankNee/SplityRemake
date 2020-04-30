@@ -31,7 +31,7 @@
             <?php else: ?>
             <span><?php $this->options->blogmeabout();?></span>
             <?php endif;?>
-
+            <span><a href="https://tanknee.cn">TankNee</a></span>
 
         </div>
     </div>
