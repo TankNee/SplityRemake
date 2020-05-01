@@ -276,9 +276,9 @@ jQuery(document).ready(function ($) {
     }
     //生成目录索引列表
     function GenerateContentList() {
-        var jquery_h2_list = $("#article-post h2"); 
+        var jquery_h2_list = $("#article-post h2");
         if (jquery_h2_list.length > 0) {
-            var content = '';
+            var content = "";
             content += "<ul id='menu-list' class='list-group'>";
             for (var i = 0; i < jquery_h2_list.length; i++) {
                 $(jquery_h2_list[i]).attr("id", $(jquery_h2_list[i]).text());
@@ -298,23 +298,21 @@ jQuery(document).ready(function ($) {
             if ($("#m-article-menu")) {
                 $("#m-article-menu").append(content);
             }
-            console.log($("#article-menu"));
-            
-            console.log(content);
         }
     }
     renderMathInElement(document.body, {
-        delimiters: [{
+        delimiters: [
+            {
                 left: "$$",
                 right: "$$",
-                display: true
+                display: true,
             },
             {
                 left: "$",
                 right: "$",
-                display: false
-            }
-        ]
+                display: false,
+            },
+        ],
     });
     GenerateContentList();
 }); // End of use strict
