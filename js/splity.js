@@ -143,6 +143,9 @@ jQuery(document).ready(function ($) {
         additionalMarginTop: 100,
         additionalMarginBottom: 20,
     });
+    $(function() {
+        $("img.lazy").lazyload({effect: "fadeIn"});
+    });
     if ($(".main-menu li").hasClass("menu-item-has-children")) {
         $(".main-menu .menu-item-has-children").prepend(
             '<span class="icon-sub-menu"><i class="iconfont icon-arrow-down-s-line"></i></span>'

@@ -277,7 +277,7 @@ function getGravatar($email, $s = 96, $d = 'mp', $r = 'g', $img = false, $atts =
 function PreprocessTextContent($article)
 {
     // 灯箱效果实现
-    $img_replacement = '<a href="$1" data-fancybox="gallery" /><img src="$1" alt="' . $article->title . '"
+    $img_replacement = '<a href="$1" data-fancybox="gallery" /><img class="lazy" data-original="$1" alt="' . $article->title . '"
         title="点击放大图片"></a>';
     $content = preg_replace('/\<img.*?src\=\"(.*?)\"[^>]*>/i', $img_replacement, $article->content);
     include 'common/utils.php';
