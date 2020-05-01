@@ -50,6 +50,8 @@ Change Log:
 - 实现归档页面
 - 修复归档页面的显示问题
 - 添加图片懒加载
+- 添加友链的短代码
+    > [link url="here is the link" img="here is the img url" des="here is the description of the link"] here is the name of link[/link]
 
 > <img src="https://img.tanknee.cn/blogpicbed/2020/04/202004217bcc85c4cc1f9.png"/>
 

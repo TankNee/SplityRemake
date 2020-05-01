@@ -47,9 +47,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "SF Pro SC", "SF Pro Text", "SF Pro Icons", PingFang SC,
-        Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif,
-        WenQuanYi Micro Hei, sans-serif;
+    font-family: "SF Pro SC", "SF Pro Text", "SF Pro Icons", PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
 }
@@ -1816,12 +1814,8 @@ input group
     border-left-width: 0;
 }
 
-.input-group
-    > .input-group-append
-    > .btn-outline-secondary:not(:disabled):not(.disabled):active,
-.input-group
-    > .input-group-append
-    > .btn-outline-secondary:not(:disabled):not(.disabled).active,
+.input-group > .input-group-append > .btn-outline-secondary:not(:disabled):not(.disabled):active,
+.input-group > .input-group-append > .btn-outline-secondary:not(:disabled):not(.disabled).active,
 .input-group > .input-group-append > .btn-outline-secondary:hover,
 .input-group > .input-group-append > .btn-outline-secondary:focus {
     background-color: transparent;
@@ -2037,17 +2031,9 @@ Media
     top: auto;
     background: #222831;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(
-        to bottom,
-        rgba(6, 6, 8, 0),
-        rgba(6, 6, 8, 0.6)
-    );
+    background: -webkit-linear-gradient(to bottom, rgba(6, 6, 8, 0), rgba(6, 6, 8, 0.6));
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(
-        to bottom,
-        rgba(6, 6, 8, 0),
-        rgba(6, 6, 8, 0.6)
-    );
+    background: linear-gradient(to bottom, rgba(6, 6, 8, 0), rgba(6, 6, 8, 0.6));
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
@@ -2491,16 +2477,8 @@ List overlay content
     bottom: 0;
     padding: 0.75rem;
     background: #222831;
-    background: -webkit-linear-gradient(
-        to bottom,
-        rgba(6, 6, 8, 0),
-        rgba(6, 6, 8, 0.7)
-    );
-    background: linear-gradient(
-        to bottom,
-        rgba(6, 6, 8, 0),
-        rgba(6, 6, 8, 0.7)
-    );
+    background: -webkit-linear-gradient(to bottom, rgba(6, 6, 8, 0), rgba(6, 6, 8, 0.7));
+    background: linear-gradient(to bottom, rgba(6, 6, 8, 0), rgba(6, 6, 8, 0.7));
 }
 
 .list-overlay-content .list-footer {
@@ -2561,6 +2539,10 @@ List group item
 --------------------------------------------------------------*/
 .list-group-item {
     border-color: #f2f2f5;
+}
+
+.list-group-item.article-tree {
+    cursor: pointer;
 }
 
 .list-group-item:first-child {
@@ -3160,7 +3142,6 @@ post content
 
 .post-content a:not(.btn) {
     color: #448ef6;
-    text-decoration: underline;
 }
 
 .post-content img {
@@ -3445,8 +3426,7 @@ post content
     font-size: 0.875rem;
     line-height: 1.5;
     border-radius: 3px;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     color: #fff;
     background-color: #393e46;
     border-color: #393e46;
@@ -3992,12 +3972,7 @@ breadcrumbs
     cursor: pointer;
 }
 
-.navbar-search
-    .searchform
-    .input-group
-    > .form-control:focus
-    + .input-group-append
-    .btn {
+.navbar-search .searchform .input-group > .form-control:focus + .input-group-append .btn {
     border-color: transparent;
     color: #448ef6;
 }
@@ -4337,22 +4312,10 @@ Dark mode input group style
     border-left-width: 0;
 }
 
-.nice-dark-mode
-    .input-group
-    > .input-group-append
-    > .btn-outline-secondary:not(:disabled):not(.disabled):active,
-.nice-dark-mode
-    .input-group
-    > .input-group-append
-    > .btn-outline-secondary:not(:disabled):not(.disabled).active,
-.nice-dark-mode
-    .input-group
-    > .input-group-append
-    > .btn-outline-secondary:hover,
-.nice-dark-mode
-    .input-group
-    > .input-group-append
-    > .btn-outline-secondary:focus {
+.nice-dark-mode .input-group > .input-group-append > .btn-outline-secondary:not(:disabled):not(.disabled):active,
+.nice-dark-mode .input-group > .input-group-append > .btn-outline-secondary:not(:disabled):not(.disabled).active,
+.nice-dark-mode .input-group > .input-group-append > .btn-outline-secondary:hover,
+.nice-dark-mode .input-group > .input-group-append > .btn-outline-secondary:focus {
     background-color: transparent;
     border-color: #f2f2f5;
     color: #152035;
@@ -4559,10 +4522,8 @@ Dark mode btn outline secondary style
     border-color: #383e43;
 }
 
-.nice-dark-mode
-    .btn-outline-secondary:not(:disabled):not(.disabled):active:focus,
-.nice-dark-mode
-    .btn-outline-secondary:not(:disabled):not(.disabled).active:focus,
+.nice-dark-mode .btn-outline-secondary:not(:disabled):not(.disabled):active:focus,
+.nice-dark-mode .btn-outline-secondary:not(:disabled):not(.disabled).active:focus,
 .nice-dark-mode .show > .btn-outline-secondary.dropdown-toggle:focus {
     box-shadow: none;
 }
@@ -5032,8 +4993,7 @@ ol.page-navigator li.current a {
 .comment-reply-title {
     font-size: 18px;
     margin: 0;
-    font-family: PingFang SC, Hiragino Sans GB, Microsoft YaHei, STHeiti,
-        WenQuanYi Micro Hei, Helvetica, Arial, sans-serif;
+    font-family: PingFang SC, Hiragino Sans GB, Microsoft YaHei, STHeiti, WenQuanYi Micro Hei, Helvetica, Arial, sans-serif;
 }
 #cancel-comment-reply-link {
     font-size: 12px;
@@ -5543,4 +5503,54 @@ a.next {
     .spot::before {
         display: none;
     }
+}
+.Link_Box {
+    width: 47%;
+    min-width: 200px;
+    
+}
+.Link_Box li a {
+    display: block;
+    padding: 0 10px 0 90px;
+    height: 90px;
+    color: #555;
+    text-decoration: none;
+}
+.Link_Box li {
+    float: left;
+    width: 100%;
+    position: relative;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    border-radius: 5px;
+    line-height: 1.3;
+    height: 90px;
+    list-style: none;
+    box-shadow: 1px 3px 5px #999;
+    margin-bottom: 10px;
+}
+.Link_Box li a img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+.Link_Box li a h4,
+.Link_Box li a p {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    line-height: 1.4;
+}
+
+.Link_Box li a h4 {
+    color: #333;
+    font-size: 18px;
+    font-weight: 900;
+    margin: 0 0 5px 0;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    padding-top: 20px;
 }
