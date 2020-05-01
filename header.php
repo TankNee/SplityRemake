@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="<?php $this->options->themeUrl('css/OwO.css');?>" type="text/css" media="all">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('style.css');?>">
     <script type="text/javascript" src="<?php $this->options->themeUrl('js/jquery.min.js');?>"></script>
+    <script type="text/javascript" src="<?php $this->options->themeUrl('js/lazyload.min.js');?>"></script>
     <script type="text/javascript" src="<?php $this->options->themeUrl('js/OwO.js');?>"></script>
     <link rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.2/jquery.fancybox.min.css">
     <script src="https://cdn.staticfile.org/fancybox/3.5.2/jquery.fancybox.min.js"></script>

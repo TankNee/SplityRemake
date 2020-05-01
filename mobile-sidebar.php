@@ -13,9 +13,14 @@
     <ul class="mobile-sidebar-menu nav flex-column">
         <li><a href="<?php $this->options->siteUrl(); ?>"><?php _e('网站导航'); ?></a></li>
         <?php $this->widget('Widget_Metas_Category_List')->parse('<li><a href="{permalink}">{name}</a></li>'); ?>
-        <li><a href="<?php $this->options->navMenusLink1(); ?>"><?php $this->options->navMenus1(); ?></a></li>
-        <li><a href="<?php $this->options->navMenusLink2(); ?>"><?php $this->options->navMenus2(); ?></a></li>
-        <li><a href="<?php $this->options->navMenusLink3(); ?>"><?php $this->options->navMenus3(); ?></a></li>
+        <?php $this->widget('Widget_Contents_Page_List')->to($pages);?>
+        <?php while ($pages->next()): ?>
+        <li>
+            <a <?php if ($this->is('page', $pages->slug)): ?> <?php endif;?>
+                href="<?php $pages->permalink();?>" title="<?php $pages->title();?>">
+                <?php $pages->title();?></a>
+        </li>
+        <?php endwhile;?>
     </ul>
     <?php if (!empty($this->options->sidebarBlock) && in_array('ShowRecentComments', $this->options->sidebarBlock) && $this->is('post')): ?>
 
