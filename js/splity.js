@@ -2,11 +2,7 @@ window.$ = jQuery;
 var isApollo = $("meta[name=apollo-enabled]").attr("content") === "1";
 
 function switchNightMode() {
-    var night =
-        document.cookie.replace(
-            /(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/,
-            "$1"
-        ) || "0";
+    var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") || "0";
     if (night == "0") {
         document.body.classList.add("nice-dark-mode");
         document.cookie = "night=1;path=/";
@@ -18,12 +14,7 @@ function switchNightMode() {
     }
 }
 (function () {
-    if (
-        document.cookie.replace(
-            /(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/,
-            "$1"
-        ) === ""
-    ) {
+    if (document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") === "") {
         if (new Date().getHours() > 21 || new Date().getHours() < 6) {
             document.body.classList.add("nice-dark-mode");
             document.cookie = "night=1;path=/";
@@ -34,11 +25,7 @@ function switchNightMode() {
             console.log("夜间模式关闭");
         }
     } else {
-        var night =
-            document.cookie.replace(
-                /(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/,
-                "$1"
-            ) || "0";
+        var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") || "0";
         if (night == "0") {
             document.body.classList.remove("nice-dark-mode");
         } else {
@@ -105,15 +92,9 @@ jQuery(document).ready(function ($) {
 
     // Smooth scrolling using jQuery easing
     $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
-        if (
-            location.pathname.replace(/^\//, "") ==
-                this.pathname.replace(/^\//, "") &&
-            location.hostname == this.hostname
-        ) {
+        if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname) {
             var target = $(this.hash);
-            target = target.length
-                ? target
-                : $("[name=" + this.hash.slice(1) + "]");
+            target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
             if (target.length) {
                 $("html, body").animate(
                     {
@@ -143,23 +124,15 @@ jQuery(document).ready(function ($) {
         additionalMarginTop: 100,
         additionalMarginBottom: 20,
     });
-    $(function() {
-        $("img.lazy").lazyload({effect: "fadeIn"});
-    });
+    // $(function () {
+    //     $("img.lazy").lazyload({ effect: "fadeIn", threshold: 200, placeholder: "images/loading.gif" });
+    // });
     if ($(".main-menu li").hasClass("menu-item-has-children")) {
-        $(".main-menu .menu-item-has-children").prepend(
-            '<span class="icon-sub-menu"><i class="iconfont icon-arrow-down-s-line"></i></span>'
-        );
+        $(".main-menu .menu-item-has-children").prepend('<span class="icon-sub-menu"><i class="iconfont icon-arrow-down-s-line"></i></span>');
     }
-    $(".mobile-sidebar-menu .menu-item-has-children > a").append(
-        '<div class="dropdown-sub-menu"><span class="iconfont icon-arrow-drop-down-fill"></span></div>'
-    ),
+    $(".mobile-sidebar-menu .menu-item-has-children > a").append('<div class="dropdown-sub-menu"><span class="iconfont icon-arrow-drop-down-fill"></span></div>'),
         $(".dropdown-sub-menu").on("click", function () {
-            $(this).parents("li").children(".sub-menu").slideToggle(),
-                $(this)
-                    .parents("li")
-                    .children(".dropdown-sub-menu")
-                    .toggleClass("current");
+            $(this).parents("li").children(".sub-menu").slideToggle(), $(this).parents("li").children(".dropdown-sub-menu").toggleClass("current");
         });
 
     // carousel
@@ -182,17 +155,11 @@ jQuery(document).ready(function ($) {
                 },
                 768: {
                     nav: true,
-                    navText: [
-                        '<i class="iconfont icon-left"></i>',
-                        '<i class="iconfont icon-right"></i>',
-                    ],
+                    navText: ['<i class="iconfont icon-left"></i>', '<i class="iconfont icon-right"></i>'],
                 },
                 992: {
                     nav: true,
-                    navText: [
-                        '<i class="iconfont icon-left"></i>',
-                        '<i class="iconfont icon-right"></i>',
-                    ],
+                    navText: ['<i class="iconfont icon-left"></i>', '<i class="iconfont icon-right"></i>'],
                 },
             },
         });
@@ -225,14 +192,7 @@ jQuery(document).ready(function ($) {
     });
     function isElementInViewport(el) {
         var rect = el.getBoundingClientRect();
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <=
-                (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <=
-                (window.innerWidth || document.documentElement.clientWidth)
-        );
+        return rect.top >= 0 && rect.left >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && rect.right <= (window.innerWidth || document.documentElement.clientWidth);
     }
     function givenElementInViewport(el, fn) {
         return function () {
@@ -243,11 +203,7 @@ jQuery(document).ready(function ($) {
     }
     function addViewportEvent(el, fn) {
         if (window.addEventListener) {
-            addEventListener(
-                "DOMContentLoaded",
-                givenElementInViewport(el, fn),
-                false
-            );
+            addEventListener("DOMContentLoaded", givenElementInViewport(el, fn), false);
             addEventListener("load", givenElementInViewport(el, fn), false);
             addEventListener("scroll", givenElementInViewport(el, fn), false);
             addEventListener("resize", givenElementInViewport(el, fn), false);
@@ -266,16 +222,12 @@ jQuery(document).ready(function ($) {
         $(".mobile-overlay").addClass("active");
     });
     if ($(".content-share").hasClass("show") === false) {
-        $(document).on(
-            "click",
-            ".nice-dropdown .weixin, .mobile-overlay",
-            function (event) {
-                event.preventDefault();
-                $(".content-share").removeClass("show");
-                $("body").removeClass("modal-open");
-                $(".mobile-overlay").removeClass("active");
-            }
-        );
+        $(document).on("click", ".nice-dropdown .weixin, .mobile-overlay", function (event) {
+            event.preventDefault();
+            $(".content-share").removeClass("show");
+            $("body").removeClass("modal-open");
+            $(".mobile-overlay").removeClass("active");
+        });
     }
     //生成目录索引列表
     function GenerateContentList() {
@@ -284,13 +236,20 @@ jQuery(document).ready(function ($) {
             var content = "";
             content += "<ul id='menu-list' class='list-group'>";
             for (var i = 0; i < jquery_h2_list.length; i++) {
-                $(jquery_h2_list[i]).attr("id", $(jquery_h2_list[i]).text());
-                var li_content =
-                    '<li class="list-group-item"><a href="#' +
-                    $(jquery_h2_list[i]).text() +
-                    '">' +
-                    $(jquery_h2_list[i]).text() +
-                    "</a></li>";
+                $(jquery_h2_list[i]).attr("id", `h2_${$(jquery_h2_list[i]).text()}`);
+                var li_content = '<a class="list-group-item" href="#h2_' + $(jquery_h2_list[i]).text() + '">' + $(jquery_h2_list[i]).text() + "</a>";
+                // console.log($(jquery_h2_list[i]).children("h3"));
+                // if ($(jquery_h2_list[i]).children("h3") && $(jquery_h2_list[i]).children("h3").length > 0) {
+                //     var jquery_h2_list_h3_list = $(jquery_h2_list[i]).children("h3");
+                //     var h3_ul = "<ul class='list-group'>";
+                //     for (let j = 0; j < jquery_h2_list_h3_list.length; j++) {
+                //         $(jquery_h2_list_h3_list[j]).attr("id", `h3_${jquery_h2_list_h3_list[j].text()}`);
+                //         var h3_li_content = '<li class="list-group-item"><a href="#h3_' + $(jquery_h2_list_h3_list[i]).text() + '">' + $(jquery_h2_list_h3_list[i]).text() + "</a></li>";
+                //         h3_ul += h3_li_content;
+                //     }
+                //     h3_ul += "</ul>";
+                //     content += h3_ul;
+                // }
                 content += li_content;
             }
             content += "</ul>";

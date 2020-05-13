@@ -100,4 +100,26 @@ EOF;
         }
         return '<div class="tip inlineBlock ' . $type . '">' . $matches[5] . '</div>';
     }
+    public static function parseLinkCallback($matches)
+    {
+        // 判断[]内的字符串数量
+        if ($matches[1] == '[' && $matches[5] == ']') {
+            return substr($matches[0], 1, -1);
+        }
+        $attr = htmlspecialchars_decode($matches[3]);
+        $attrs = self::shortcode_parse_atts($attr);
+        $url = $attrs['url'];
+        $img = $attrs['img'];
+        $des = $attrs['des'];
+        return '<div class="Link_Box">
+                    <li>
+                        <a class="mc-link" href="' . $url . '" target="_blank" title="' . $matches[5] . '">
+                            <img src="' . $img . '">
+                            <h4 id="toc_0">' . $matches[5] . '</h4>
+                            <p>' . $des . '</p>
+                        </a>
+                    </li>
+                </div>';
+        // return '<div class="tip inlineBlock">' . $matches[5] . '</div>';
+    }
 }

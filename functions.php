@@ -288,6 +288,12 @@ function PreprocessTextContent($article)
         $content = preg_replace_callback("/$pattern/", array('utils', 'parseScodeCallback'),
             $content);
     }
+    // parse friend links
+    if (strpos($content, '[link') !== false) {
+        $pattern = get_shortcode_regex(array('link'));
+        $content = preg_replace_callback("/$pattern/", array('utils', 'parseLinkCallback'),
+            $content);
+    }
     // parse button
     if (strpos($content, '[button') !== false) {
         $pattern = get_shortcode_regex(array('button'));
