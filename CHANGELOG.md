@@ -55,3 +55,5 @@ Change Log:
 
 > <img src="https://img.tanknee.cn/blogpicbed/2020/04/202004217bcc85c4cc1f9.png"/>
 
+- add lazy load placeholder
+
