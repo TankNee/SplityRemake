@@ -47,16 +47,15 @@
 <script type="text/javascript" src="<?php $this->options->themeUrl('js/theia-sticky-sidebar.min.js?ver=1.0.2');?>">
 </script>
 <script type="text/javascript" src="<?php $this->options->themeUrl('js/splity.js?ver=1.0.2');?>"></script>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 const imageLazyLoader = () => {
     $("img.lazy").lazyload({
         effect: "fadeIn",
         placeholder: "<?php $this->options->themeUrl('images/loading1.gif');?>"
     });
-    console.log("<?php $this->options->themeUrl('images/loading.gif');?>");
 }
 imageLazyLoader();
-</script>
+</script> -->
 <?php if ($this->is('post')): ?>
 <?php if ($this->options->baiduappdi): ?>
 <script type="application/ld+json">

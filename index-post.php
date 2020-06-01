@@ -36,19 +36,22 @@ echo '<img src="' . $imgUrl . '" class="avatar" height="25" width="25">';?>
                 <div class="col-4">
                     <div class="media media-3x2">
                         <a class="media-content" title="<?php $this->title()?>" href="<?php $this->permalink()?>"
-                            target="_blank" style='background-image:url(" <?php echo showThumbnail($this, 0); ?>")'></a>
+                            target="_blank"><img class="lazy"
+                                data-original="<?php echo showThumbnail($this, 0); ?>"></a>
                     </div>
                 </div>
                 <div class="col-4">
                     <div class="media media-3x2">
                         <a class="media-content" title="<?php $this->title()?>" href="<?php $this->permalink()?>"
-                            target="_blank" style='background-image:url(" <?php echo showThumbnail($this, 1); ?>")'></a>
+                            target="_blank"><img class="lazy"
+                                data-original="<?php echo showThumbnail($this, 1); ?>"></a>
                     </div>
                 </div>
                 <div class="col-4">
                     <div class="media media-3x2">
                         <a class="media-content" title="<?php $this->title()?>" href="<?php $this->permalink()?>"
-                            target="_blank" style='background-image:url(" <?php echo showThumbnail($this, 2); ?>")'></a>
+                            target="_blank"><img class="lazy"
+                                data-original="<?php echo showThumbnail($this, 2); ?>"></a>
                     </div>
                 </div>
 
@@ -75,9 +78,9 @@ echo '<img src="' . $imgUrl . '" class="avatar" height="25" width="25">';?>
                             <?php $email = $this->author->mail;
 $imgUrl = getGravatar($email);
 echo '<img src="' . $imgUrl . '" class="avatar" height="25" width="25">';?>
-                            
-                                <?php strtoupper($this->author->screenName());?>
-                            
+
+                            <?php strtoupper($this->author->screenName());?>
+
                         </div>
                         <div class="flex-fill"></div>
                         <div>
@@ -92,8 +95,8 @@ echo '<img src="' . $imgUrl . '" class="avatar" height="25" width="25">';?>
 
             <div class="media media-21x9 mb-md-3">
                 <a class="media-content" title="<?php $this->title()?>" href="<?php $this->permalink()?>"
-                    target="_blank"
-                    style='background-image:url("<?php $this->fields->bimg ? $this->fields->bimg() : echoThumbnail($this, 0);?>")'></a>
+                    target="_blank"><img class="lazy"
+                        data-original="<?php $this->fields->bimg ? $this->fields->bimg() : echoThumbnail($this, 0);?>"></a>
             </div>
             <div class="list-desc d-none d-md-block text-sm text-secondary">
                 <div class="h-2x" style="color:#949da3;"><?php $this->excerpt(60, '...');?></div>
@@ -115,8 +118,8 @@ echo '<img src="' . $imgUrl . '" class="avatar" height="25" width="25">';?>
                 <a class="media-content" href="<?php $this->permalink()?>" title="<?php $this->title()?>"
                     style='background-image:url("<?php $this->fields->img();?>")'></a>
                 <?php else: ?>
-                <a class="media-content" href="<?php $this->permalink()?>" title="<?php $this->title()?>"
-                    style='background-image:url("<?php echo showThumbnail($this, 0); ?>")'></a>
+                <a class="media-content" href="<?php $this->permalink()?>" title="<?php $this->title()?>"><img
+                        class="lazy" data-original="<?php echo showThumbnail($this, 0); ?>"></a>
                 <?php endif;?>
             </div>
             <div class="list-content">

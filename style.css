@@ -5507,7 +5507,6 @@ a.next {
 .Link_Box {
     width: 47%;
     min-width: 200px;
-    
 }
 .Link_Box li a {
     display: block;
@@ -5553,4 +5552,9 @@ a.next {
     -webkit-transition: 0.5s;
     transition: 0.5s;
     padding-top: 20px;
+}
+img.lazy {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
